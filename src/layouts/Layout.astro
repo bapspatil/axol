@@ -39,29 +39,7 @@ import "../styles/globals.css";
   </head>
   <body>
     <slot />
+    <script src="https://unpkg.com/lenis@1.0.44/dist/lenis.min.js"></script>
+    <script type="module" src="/src/utils/lenisSmoothScroll.js"></script>
   </body>
 </html>
-<script type="text/partytown">
-  document.addEventListener("DOMContentLoaded", () => {
-    // Function to smoothly scroll to a section
-    const scrollToSection = (selector) => {
-      const element = document.querySelector(selector);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-    };
-
-    // Function to attach click event listeners to navbar items
-    const attachNavbarScrollListeners = () => {
-      document.querySelectorAll("[data-scroll-to]").forEach((navItem) => {
-        navItem.addEventListener("click", () => {
-          const targetSection = navItem.getAttribute("data-scroll-to");
-          scrollToSection(`#${targetSection}`);
-        });
-      });
-    };
-
-    // Initialize the scroll functionality for navbar
-    attachNavbarScrollListeners();
-  });
-</script>
