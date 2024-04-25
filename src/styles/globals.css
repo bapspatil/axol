@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  @apply leading-[normal] m-0;
+}
+*,
+::before,
+::after {
+  border-width: 0;
+}
+
+.hamburger-menu-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem; /* pt-1 */
+  padding-left: 1rem; /* pl-1 */
+  padding-right: 1rem; /* pr-1 */
+  padding-bottom: 4rem; /* pb-4 */
+  background-color: #FFCD9C;
+  border-radius: 50%; /* Adjust if needed */
+  cursor: pointer;
+}
+
+.hamburger-menu-button img {
+  /* Center the image without padding */
+}
+
+.radio-button {
+  display: none; /* Hide the default radio button */
+}
+
+.radio-label {
+  display: inline-block;
+  height: 20px; /* Adjusted from 4px to 20px */
+  width: 20px; /* Adjusted from 4px to 20px */
+  border-radius: 50%;
+  background-color: transparent;
+  border: 2px solid var(--brand-colors-node-indigo); /* Adjust the color variable as needed */
+  cursor: pointer;
+}
+
+.radio-button:checked + .radio-label {
+  background-color: var(--brand-colors-node-indigo); /* Adjust the color variable as needed */
+}
+
+:root {
+  --brand-colors-node-indigo: #28338b;
+}
+
+@font-face {
+  font-family: 'Panamera';
+  src: url('./fonts/Panamera-Regular.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Panamera';
+  src: url('./fonts/Panamera-Bold.otf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media (max-width: 750px) {
+    .navbar-logo {
+        z-index: 2; /* Adjust the value as needed */
+        position: relative; /* Ensure the element is positioned */
+    }
+    .button-container {
+        z-index: 1; /* Ensure this is lower than the navbar logo's z-index */
+        position: relative; /* Ensure the element is positioned */
+    }
+}

@@ -1,51 +1,67 @@
 ---
 interface Props {
-	title: string;
+  title: string;
 }
 
 const { title } = Astro.props;
+import "../styles/globals.css";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <title>{title}</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:ital,wght@0,500;0,700;0,800;1,500&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Panamera:wght@700&display=swap"
+    />
+    <style>
+      @media (max-width: 750px) {
+        .navbar-logo {
+          z-index: 2; /* Adjust the value as needed */
+          position: relative; /* Ensure the element is positioned */
+        }
+        .button-container {
+          z-index: 1; /* Ensure this is lower than the navbar logo's z-index */
+          position: relative; /* Ensure the element is positioned */
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
-	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
-	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
-</style>
+<script type="text/partytown">
+  document.addEventListener("DOMContentLoaded", () => {
+    // Function to smoothly scroll to a section
+    const scrollToSection = (selector) => {
+      const element = document.querySelector(selector);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    // Function to attach click event listeners to navbar items
+    const attachNavbarScrollListeners = () => {
+      document.querySelectorAll("[data-scroll-to]").forEach((navItem) => {
+        navItem.addEventListener("click", () => {
+          const targetSection = navItem.getAttribute("data-scroll-to");
+          scrollToSection(`#${targetSection}`);
+        });
+      });
+    };
+
+    // Initialize the scroll functionality for navbar
+    attachNavbarScrollListeners();
+  });
+</script>
