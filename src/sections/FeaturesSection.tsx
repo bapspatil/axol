@@ -13,6 +13,7 @@ export default function FeaturesSection() {
     <section
       ref={targetRef}
       className="relative h-[300vh] bg-brand-colors-cryptowave-sky py-16 gap-1"
+      id="featuresSection"
     >
       <h2 className="relative text-center w-full m-0 font-bold font-title text-h2 text-brand-colors-crypto-frost">
         What we offer
@@ -85,10 +86,10 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
           src={card.image}
         />
 
-        <div className="w-[553px] !m-[0] absolute bottom-[-60px] left-[calc(50%_-_276.5px)] rounded-53xl bg-brand-colors-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 min-h-[76px] max-w-full z-[1] border-b-[8px] border-solid border-brand-colors-node-indigo">
-          <b className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-brand-colors-node-indigo text-center mq750:text-10xl mq750:leading-[29px] mq450:text-3xl mq450:leading-[22px]">
+        <div className="w-[553px] !m-[0] absolute bottom-[-60px] left-[calc(50%_-_276.5px)] rounded-full bg-brand-colors-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 min-h-[76px] max-w-full z-[1] border-b-[8px] border-solid border-brand-colors-node-indigo">
+          <h4 className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-brand-colors-node-indigo text-center mq750:text-10xl mq750:leading-[29px] mq450:text-3xl mq450:leading-[22px]">
             {card.title}
-          </b>
+          </h4>
         </div>
       </div>
       <div className="w-[1120px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">

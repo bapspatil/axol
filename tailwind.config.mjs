@@ -24,12 +24,7 @@ export default {
 				'display': ["'Panamera'", 'sans-serif'],
 			},
 			borderRadius: {
-				"8981xl": "9000px",
-				"81xl": "100px",
-				"53xl": "72px",
-				lg: "18px",
-				"106xl": "125px",
-				"77xl": "96px",
+				DEFAULT: '6px',
 			},
 		},
 		fontSize: {
@@ -96,5 +91,6 @@ export default {
 				'html': { fontSize: "20px" },
 			})
 		}),
+		require("daisyui"),
 	],
 }
