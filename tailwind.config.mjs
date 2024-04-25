@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const plugin = require('tailwindcss/plugin');
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -16,9 +18,10 @@ export default {
 			},
 			spacing: {},
 			fontFamily: {
-				"body-s": "'Plus Jakarta Sans'",
-				h4: "Panamera",
-				"panamera": ["'Panamera'", 'sans-serif'],
+				'sans': ['"Plus Jakarta Sans"', 'sans-serif'],
+				'title': ["'Panamera'", 'sans-serif'],
+				'body': ["'Plus Jakarta Sans'", 'sans-serif'],
+				'display': ["'Panamera'", 'sans-serif'],
 			},
 			borderRadius: {
 				"8981xl": "9000px",
@@ -30,20 +33,68 @@ export default {
 			},
 		},
 		fontSize: {
-			base: "16px",
-			xl: "20px",
-			"5xl": "24px",
-			lgi: "19px",
-			"45xl": "64px",
-			"32xl": "51px",
-			"19xl": "38px",
-			"9xl": "28px",
-			"3xl": "22px",
-			"17xl": "36px",
-			"10xl": "29px",
-			"sm-9": "13.9px",
-			inherit: "inherit",
+			base: ['20px', {
+				lineHeight: '145%',
+				letterSpacing: '0em',
+				fontWeight: '500',
+			}],
+			'body-md': ['1rem', {
+				lineHeight: '145%',
+				letterSpacing: '0em',
+				fontWeight: '500',
+			}],
+			'body-sm': ['0.8rem', {
+				lineHeight: '145%',
+				letterSpacing: '0em',
+				fontWeight: '500',
+			}],
+			'h1': ['3.6rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'h2': ['3.2rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'h3': ['2.4rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'h4': ['1.8rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'h5': ['1.4rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'nav': ['1rem', {
+				lineHeight: '145%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'label': ['0.7rem', {
+				lineHeight: '120%',
+				letterSpacing: '10%',
+				fontWeight: '700',
+			}],
+			'button': ['1.2rem', {
+				lineHeight: '120%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
 		},
 	},
-	plugins: [],
+	plugins: [
+		plugin(function ({ addBase }) {
+			addBase({
+				'html': { fontSize: "20px" },
+			})
+		}),
+	],
 }

@@ -2,13 +2,14 @@
 import Layout from "../layouts/Layout.astro";
 import Navbar from "../components/Navbar.astro";
 import HeroSection from "../sections/HeroSection.astro";
-import FeaturesSection from "../sections/FeaturesSection.astro";
+import FeaturesSection from "../sections/OldFeaturesSection.astro";
 import AUMSection from "../sections/AUMSection.astro";
 import UseCasesSection from "../sections/UseCasesSection.astro";
 import TeamSection from "../sections/TeamSection.astro";
 import ContactSection from "../sections/ContactSection.astro";
 import Footer from "../components/Footer.astro";
 import Separator from "../components/Separator.astro";
+import FeaturesSection from "../sections/FeaturesSection.tsx";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -22,7 +23,7 @@ import Separator from "../components/Separator.astro";
         mixBlendMode="mix-blend-exclusion"
         backgroundColor="bg-brand-colors-cryptowave-sky"
       />
-      <FeaturesSection />
+      <FeaturesSection client:only="react" />
       <Separator
         topVector="/vector-11.svg"
         bottomVector="/detailsseparatortechgrid@2x.png"

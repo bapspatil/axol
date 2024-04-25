@@ -35,23 +35,20 @@ import { Image } from "astro:assets";
         <div
           class="self-stretch flex flex-row items-start justify-start py-0 px-[22px]"
         >
-          <h1
-            class="m-0 flex-1 relative text-inherit leading-[100%] font-bold font-inherit z-[1] mq750:text-[54px] mq750:leading-[54px] mq450:text-[41px] mq450:leading-[41px]"
-          >
-            <p class="m-0">Stake sustainably</p>
-            <p class="m-0">with self-healing nodes</p>
+          <h1 class="font-title text-h1 m-0 relative">
+            Stake sustainably<span style="display: block;"
+              >with self-healing nodes</span
+            >
           </h1>
         </div>
         <div
           class="self-stretch flex flex-row items-start justify-start py-0 px-[22px] box-border max-w-full text-xl"
         >
-          <div
-            class="flex-1 relative leading-[145%] font-medium inline-block max-w-full mq450:text-base mq450:leading-[23px]"
-          >
+          <p class="flex-1 relative inline-block max-w-full text-body-md">
             Empowering institutional staking infrastructure with unrivaled
             uptime, harnessing self-healing nodes and renewable energy across
             Latin America.
-          </div>
+          </p>
         </div>
         <div
           class="self-stretch flex flex-col items-start justify-start gap-[10.7px] max-w-full text-left text-5xl"
@@ -69,7 +66,7 @@ import { Image } from "astro:assets";
                     class="w-full rounded-md bg-brand-colors-node-indigo flex items-center justify-center py-3 px-[34px] whitespace-nowrap border-t-[2px] border-solid border-brand-colors-cryptowave-sky border-r-[2px] border-b-[6px] border-l-[2px] hover:bg-blue-500 transition-colors duration-300 ease-in-out"
                   >
                     <b
-                      class="relative lowercase inline-block min-w-[125px] text-white"
+                      class="relative lowercase inline-block min-w-[125px] text-white font-display text-button"
                       >Book a Call</b
                     >
                   </div>
@@ -81,10 +78,11 @@ import { Image } from "astro:assets";
                   <div
                     class="w-full rounded-md flex items-center justify-center py-3 px-[34px] border-t-[2px] border-solid border-brand-colors-crypto-frost border-r-[2px] border-b-[6px] border-l-[2px] hover:bg-blue-500 transition-colors duration-300 ease-in-out"
                   >
-                    <b
-                      class="w-[124px] relative lowercase inline-block min-w-[124px] text-white whitespace-nowrap mq450:text-lgi"
-                      >learn more</b
-                    >
+                    <button
+                      type="button"
+                      class="relative lowercase inline-block min-w-[124px] text-white whitespace-nowrap hover:bg-blue-500 transition-colors duration-300 ease-in-out font-display text-button"
+                      >learn more
+                    </button>
                   </div>
                 </a>
               </div>
