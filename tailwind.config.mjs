@@ -44,20 +44,6 @@ export default {
 			"sm-9": "13.9px",
 			inherit: "inherit",
 		},
-		screens: {
-			mq1275: {
-				raw: "screen and (max-width: 1275px)",
-			},
-			mq1100: {
-				raw: "screen and (max-width: 1100px)",
-			},
-			mq750: {
-				raw: "screen and (max-width: 750px)",
-			},
-			mq450: {
-				raw: "screen and (max-width: 450px)",
-			},
-		},
 	},
 	plugins: [],
 }

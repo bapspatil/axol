@@ -1,0 +1,30 @@
+---
+interface Props {
+  topVector: string;
+  bottomVector: string;
+  mixBlendMode: string;
+  backgroundColor: string;
+}
+const { topVector, bottomVector, mixBlendMode, backgroundColor } = Astro.props;
+---
+
+<section
+  class:list={[
+    "w-full h-[100px] relative overflow-hidden shrink-0",
+    backgroundColor,
+  ]}
+>
+  <img
+    class="absolute top-[-125px] left-0 w-full h-auto object-cover"
+    alt=""
+    src={topVector}
+  />
+  <img
+    class:list={[
+      "absolute bottom-[-41px] left-0 right-0 w-full h-auto object-cover z-1",
+      mixBlendMode,
+    ]}
+    alt=""
+    src={bottomVector}
+  />
+</section>

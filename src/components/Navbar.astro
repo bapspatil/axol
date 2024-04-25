@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+---
+
+<div
+  class="fixed flex z-50 mt-8 items-center justify-center text-brand-colors-node-indigo"
+>
+  <div
+    id="navbar"
+    class="overflow-hidden flex flex-col items-center justify-center max-w-full z-[2]"
+  >
+    <div
+      class="rounded-t-77xl rounded-b-none bg-brand-colors-axol-coral shadow-[0px_0px_3px_rgba(230,_132,_118,_0.5)] overflow-hidden flex flex-row items-center justify-center py-2 px-6 box-border gap-[8px] whitespace-nowrap max-w-full"
+    >
+      <Image
+        class="h-6 w-6 relative overflow-hidden shrink-0 min-h-[24px]"
+        alt=""
+        src="/frame.svg"
+        width={24}
+        height={24}
+      />
+
+      <div class="relative leading-[145%] font-medium mq750:hidden">
+        Now running infra on Lido, Gnosis, & Osmosis!
+      </div>
+    </div>
+    <div
+      class="rounded-81xl bg-brand-colors-axol-coral shadow-[0px_4px_13.6px_rgba(82,_18,_10,_0.15)] box-border flex flex-row items-center justify-between py-1 px-[29px] gap-[30px] max-w-full border-t-[2px] border-solid border-blanchedalmond border-l-[2px] mq750:justify-between mq750:pl-[15px] mq750:pr-[15px] mq750:box-border mq450:pl-5 mq450:pr-5 mq450:box-border button-container transform transition-transform duration-300 ease-in-out"
+    >
+      <nav
+        class="m-0 rounded-[54px] flex flex-row items-center justify-center py-[8px] px-[15px] box-border gap-[24px] max-w-full text-left text-xl text-brand-colors-node-indigo font-body-s mq750:flex mq450:flex"
+      >
+        <div class="navbar-logo-container mq750:order-first mq450:order-first">
+          <Image
+            class="self-stretch w-[149px] max-h-full object-cover min-h-[56px] pt-0 pl-2 pb-0 pr-0 navbar-logo"
+            loading="lazy"
+            alt=""
+            width={298}
+            height={112}
+            src="/navbarlogogroup@2x.png"
+          />
+        </div>
+        <div
+          class="rounded-sm flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+          data-scroll-to="homeSection"
+          id="navbarHomeButtonContainer"
+        >
+          <b
+            class="relative leading-[145%] lowercase inline-block min-w-[56px] cursor-pointer"
+            id="homeText">Home</b
+          >
+        </div>
+        <div
+          class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+          data-scroll-to="whatWeOfferSection"
+          id="navbarFeaturesButtonContainer"
+        >
+          <b
+            class="relative leading-[145%] lowercase inline-block min-w-[82px] cursor-pointer"
+            data-scroll-to="feature-carousel"
+            id="featuresText">Features</b
+          >
+        </div>
+        <div
+          class="self-stretch hidden flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+          data-scroll-to="navbarProblemButtonContainer"
+          id="navbarProblemButtonContainer"
+        >
+          <b class="self-stretch relative leading-[145%] lowercase">Problem</b>
+        </div>
+        <div
+          class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+        >
+          <b
+            class="relative leading-[145%] lowercase inline-block min-w-[95px] whitespace-nowrap cursor-pointer"
+            data-scroll-to="useCasesSection"
+            id="useCasesText">Use Cases</b
+          >
+        </div>
+        <div
+          class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+        >
+          <b
+            class="relative leading-[145%] lowercase inline-block min-w-[51px] cursor-pointer"
+            data-scroll-to="teamSection"
+            id="teamText">Team</b
+          >
+        </div>
+        <div
+          class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo"
+        >
+          <b
+            class="relative leading-[145%] lowercase inline-block min-w-[78px] cursor-pointer"
+            data-scroll-to="contactSection"
+            id="contactText">Contact</b
+          >
+        </div>
+        <div
+          class="h-8 w-8 rounded-[124px] box-border hidden flex-row items-baseline justify-center border-[1px] border-solid border-brand-colors-node-indigo"
+        >
+          <b class="relative leading-[145%] lowercase">en</b>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
