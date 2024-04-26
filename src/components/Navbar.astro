@@ -65,13 +65,13 @@ const navLinks = [
         </div>
         {
           navLinks.map((link) => (
-            <div
-              class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo transition-all duration-200 ease-in-out"
-              data-scroll-to={link.href}
-            >
-              <p class="relative font-display text-nav lowercase inline-block min-w-[56px] cursor-pointer">
+            <div class="flex flex-row items-center justify-center cursor-pointer hover:border-b-[4px] hover:border-solid hover:border-brand-colors-node-indigo transition-all duration-200 ease-in-out">
+              <a
+                class="relative font-display text-nav lowercase inline-block min-w-[56px] cursor-pointer"
+                href={link.href}
+              >
                 {link.name}
-              </p>
+              </a>
             </div>
           ))
         }
