@@ -1,6 +1,6 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Navbar from "../components/Navbar.astro";
+import Navbar from "../components/Navbar.tsx";
 import HeroSection from "../sections/HeroSection.astro";
 import FeaturesSection from "../sections/FeaturesSection.tsx";
 import AUMSection from "../sections/AUMSection.astro";
@@ -14,6 +14,7 @@ import Separator from "../components/Separator.astro";
 <Layout title="Welcome to Astro.">
   <main>
     <div class="w-full relative flex flex-col justify-start items-center">
+      <!-- <Navbar /> Astro Component -->
       <Navbar />
       <HeroSection />
       <Separator
