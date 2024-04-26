@@ -91,6 +91,5 @@ export default {
 				'html': { fontSize: "20px" },
 			})
 		}),
-		require("daisyui"),
 	],
 }
