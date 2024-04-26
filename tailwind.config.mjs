@@ -11,10 +11,7 @@ export default {
 				"brand-colors-axol-coral": "#ffcd9c",
 				"brand-colors-node-indigo": "#28338b",
 				"brand-colors-cryptowave-sky": "#58a1c6",
-				darkslateblue: "#4f59b3",
 				"brand-colors-crypto-frost": "#fdfff9",
-				lavender: "rgba(242, 232, 255, 0.55)",
-				blanchedalmond: "#ffe7ce",
 			},
 			spacing: {},
 			fontFamily: {
@@ -22,9 +19,6 @@ export default {
 				'title': ["'Panamera'", 'sans-serif'],
 				'body': ["'Plus Jakarta Sans'", 'sans-serif'],
 				'display': ["'Panamera'", 'sans-serif'],
-			},
-			borderRadius: {
-				DEFAULT: '6px',
 			},
 		},
 		fontSize: {

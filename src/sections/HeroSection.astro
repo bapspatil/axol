@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Button from "../components/Button.astro";
 ---
 
 <section
@@ -20,7 +21,7 @@ import { Image } from "astro:assets";
       class="self-stretch flex flex-row items-start justify-center py-0 px-5 box-border max-w-full text-[68px] mt-40"
     >
       <div
-        class="w-[844px] flex flex-col items-start justify-start py-0 pr-[7px] pl-2 box-border relative gap-[23.7px] max-w-full z-[1]"
+        class="w-[844px] flex flex-col items-center justify-center py-0 pr-[7px] pl-2 box-border relative gap-[23.7px] max-w-full z-[1]"
         id="homeSection"
       >
         <Image
@@ -51,52 +52,19 @@ import { Image } from "astro:assets";
           </p>
         </div>
         <div
-          class="self-stretch flex flex-col items-start justify-start gap-[10.7px] max-w-full text-left text-5xl"
+          class="w-full flex flex-col md:flex-row items-center justify-center gap-4"
         >
-          <div class="flex justify-center items-center w-full">
-            <div class="flex justify-center items-center w-full">
-              <div
-                class="flex flex-row items-center justify-center gap-[16px] max-w-full"
-              >
-                <a
-                  href="#bookCall"
-                  class="w-[193.5px] flex justify-center py-0 px-0 box-border cursor-pointer no-underline"
-                >
-                  <div
-                    class="w-full rounded-md bg-brand-colors-node-indigo flex items-center justify-center py-3 px-[34px] whitespace-nowrap border-t-[2px] border-solid border-brand-colors-cryptowave-sky border-r-[2px] border-b-[6px] border-l-[2px] hover:bg-blue-500 transition-colors duration-300 ease-in-out"
-                  >
-                    <b
-                      class="relative lowercase inline-block min-w-[125px] text-white font-display text-button"
-                      >Book a Call</b
-                    >
-                  </div>
-                </a>
-                <a
-                  href="#learnMore"
-                  class="w-[193.5px] flex justify-center py-0 px-0 box-border text-center cursor-pointer no-underline"
-                >
-                  <div
-                    class="w-full rounded-md flex items-center justify-center py-3 px-[34px] border-t-[2px] border-solid border-brand-colors-crypto-frost border-r-[2px] border-b-[6px] border-l-[2px] hover:bg-blue-500 transition-colors duration-300 ease-in-out"
-                  >
-                    <button
-                      type="button"
-                      class="relative lowercase inline-block min-w-[124px] text-white whitespace-nowrap hover:bg-blue-500 transition-colors duration-300 ease-in-out font-display text-button"
-                      >learn more
-                    </button>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-          <Image
-            class="self-stretch mq450:h-[300px] h-[591px] relative max-w-full overflow-hidden shrink-0 object-cover"
-            loading="lazy"
-            alt=""
-            width={1658}
-            height={1182}
-            src="/ctaaxolelectricfield@2x.png"
-          />
+          <Button variant="primaryLight" text="Book a Call" />
+          <Button variant="secondaryDark" text="Learn More" />
         </div>
+        <Image
+          class="self-stretch mq450:h-[300px] h-[591px] relative max-w-full overflow-hidden shrink-0 object-cover"
+          loading="lazy"
+          alt=""
+          width={1658}
+          height={1182}
+          src="/ctaaxolelectricfield@2x.png"
+        />
       </div>
     </div>
     <div

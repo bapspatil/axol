@@ -1,0 +1,116 @@
+---
+import { Image } from "astro:assets";
+
+interface Props {
+  href?: string;
+  variant?:
+    | undefined
+    | "primaryDark"
+    | "secondaryDark"
+    | "primaryLight"
+    | "secondaryLight"
+    | "icon";
+  text?: string;
+  icon?: string;
+}
+
+let { href, text, variant, icon } = Astro.props;
+
+let classList = [
+  "w-full inline-flex",
+  "justify-center",
+  "items-center",
+  "px-[36px]",
+  "py-[12px]",
+  "border-t-[2px]",
+  "border-r-[2px]",
+  "border-b-[6px]",
+  "border-l-[2px]",
+  "rounded-[8px]",
+  "transition-all",
+  "duration-300",
+  "ease-in-out",
+  "font-display",
+  "text-button",
+  "no-underline",
+  "lowercase",
+];
+if (href === null) {
+  href = "#";
+}
+
+switch (variant) {
+  case "primaryDark":
+  case undefined:
+    classList.push(
+      "bg-brand-colors-axol-coral",
+      "text-brand-colors-shadow-blockchain",
+      "border-brand-colors-decentralized-coral",
+      "hover:border-b-[2px]",
+      "active:bg-brand-colors-decentralized-coral",
+      "active:text-brand-colors-crypto-frost",
+      "active:border-brand-colors-axol-coral"
+    );
+    break;
+  case "secondaryDark":
+    classList.push(
+      "bg-transparent",
+      "text-brand-colors-crypto-frost",
+      "border-brand-colors-crypto-frost",
+      "hover:border-b-[2px]",
+      "active:bg-brand-colors-decentralized-coral",
+      "active:text-brand-colors-shadow-blockchain",
+      "active:border-brand-colors-axol-coral"
+    );
+    break;
+  case "primaryLight":
+    classList.push(
+      "bg-brand-colors-node-indigo",
+      "text-brand-colors-crypto-frost",
+      "border-brand-colors-cryptowave-sky",
+      "hover:border-b-[2px]",
+      "active:bg-brand-colors-shadow-blockchain",
+      "active:text-brand-colors-crypto-frost",
+      "active:border-brand-colors-cryptowave-sky"
+    );
+    break;
+  case "secondaryLight":
+    classList.push(
+      "bg-transparent",
+      "text-brand-colors-node-indigo",
+      "border-brand-colors-node-indigo",
+      "hover:border-b-[2px]",
+      "active:bg-brand-colors-cryptowave-sky",
+      "active:text-brand-colors-crypto-frost",
+      "active:border-brand-colors-node-indigo"
+    );
+    break;
+  case "icon":
+    classList = [
+      "flex",
+      "justify-center",
+      "items-center",
+      "px-[8px]",
+      "py-[8px]",
+      "border-t-[2px]",
+      "border-r-[2px]",
+      "border-b-[6px]",
+      "border-l-[2px]",
+      "rounded-full",
+      "transition-all",
+      "duration-300",
+      "ease-in-out",
+      "inline-flex",
+      "no-underline",
+      "hover:border-b-[2px]",
+    ];
+    break;
+}
+---
+
+<a href={href} class="w-full md:w-auto">
+  <button class:list={classList}>
+    {text}
+    {icon && <Image src={icon} alt="" width={24} height={24} />}
+  </button>
+</a>
