@@ -1,9 +1,11 @@
 ---
 import { Image } from "astro:assets";
+import Counter from "../components/Counter.tsx";
 ---
 
 <section
-  class="h-screen self-stretch bg-brand-colors-crypto-frost overflow-hidden flex flex-col items-start justify-start pt-[90px] px-16 pb-[136px] relative gap-[20px] text-center text-[110px] text-brand-colors-node-indigo font-body-s mq750:pl-8 mq750:pr-8 mq750:box-border mq450:pt-[58px] mq450:pb-[88px] mq450:box-border"
+  id="aumSection"
+  class="relative w-screen h-screen bg-brand-colors-crypto-frost overflow-hidden flex flex-col items-center justify-center text-center text-brand-colors-node-indigo"
 >
   <Image
     class="w-screen h-auto absolute !m-[0] right-0 bottom-0 left-0 overflow-hidden shrink-0 mix-blend-difference"
@@ -14,11 +16,14 @@ import { Image } from "astro:assets";
   />
 
   <div
-    class="relative h-screen flex flex-col justify-center items-center gap-0"
+    class="h-screen flex flex-col justify-center items-center gap-0 mx-0 px-0"
   >
-    <h2 class="relative font-title text-[175%] font-bold text-center">
-      +$22,000,000
-    </h2>
-    <h2 class="relative font-title text-h2 text-center">AUM</h2>
+    <p
+      class="font-title text-[128px] font-bold hidden md:block lg:text-[160px]"
+    >
+      ${(<Counter value={22000000} client:only="react" />)}
+    </p>
+    <p class="font-title text-h2 font-bold block md:hidden">$22M+</p>
+    <p class="font-title text-h3">AUM</p>
   </div>
 </section>
