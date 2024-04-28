@@ -12,9 +12,10 @@ interface Props {
     | "icon";
   text?: string;
   icon?: string;
+  target?: string;
 }
 
-let { href, text, variant, icon } = Astro.props;
+let { href, target, text, variant, icon } = Astro.props;
 
 let classList = [
   "w-full inline-flex",
@@ -35,8 +36,12 @@ let classList = [
   "no-underline",
   "lowercase",
 ];
-if (href === null) {
+if (href === undefined) {
   href = "#";
+}
+
+if (target === undefined) {
+  target = "_self";
 }
 
 switch (variant) {
@@ -108,7 +113,7 @@ switch (variant) {
 }
 ---
 
-<a href={href} class="w-full sm:w-auto">
+<a href={href} class="w-full sm:w-auto" target={target}>
   <button class:list={classList}>
     {text}
     {icon && <Image src={icon} alt="" width={24} height={24} />}
