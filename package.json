@@ -16,6 +16,7 @@
     "@types/react-dom": "~18.2.0",
     "astro": "^4.7.0",
     "framer-motion": "^11.1.7",
+    "lenis": "^1.0.45",
     "nanostores": "^0.10.3",
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
@@ -29,7 +30,7 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "cloudflare": "wrangler pages dev ./dist" 
+    "cloudflare": "wrangler pages dev ./dist"
   },
   "type": "module"
 }

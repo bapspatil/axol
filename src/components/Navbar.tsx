@@ -48,7 +48,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-4">
                     {navLinks.map((item) => (
-                        <a key={item.name} href={item.href} className="text-nav font-display leading-6 rounded-[4px] text-brand-colors-node-indigo lowercase hover:border-b-4 hover:border-brand-colors-node-indigo transition-all duration-300">
+                        <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display leading-6 rounded-[4px] text-brand-colors-node-indigo lowercase hover:border-b-4 hover:border-brand-colors-node-indigo transition-all duration-300">
                             {item.name}
                         </a>
                     ))}
@@ -92,7 +92,7 @@ export default function Navbar() {
                     </div>
                 </Dialog.Panel>
             </Dialog>
-        </header>
+        </header >
     );
 }
 

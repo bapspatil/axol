@@ -17,7 +17,7 @@ import Separator from "../components/Separator.astro";
       class="w-full relative flex flex-col justify-start items-center overflow-x-clip"
     >
       <!-- <Navbar /> Astro Component -->
-      <Navbar client:only="react" />
+      <Navbar client:load />
       <HeroSection />
       <Separator
         topVector="/herobottomvector@2x.png"
