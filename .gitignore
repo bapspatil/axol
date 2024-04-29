@@ -19,7 +19,10 @@ pnpm-debug.log*
 # environment variables
 .env
 .env.production
-wranger.toml
+wrangler.toml
+dev.vars
+worker-configuration.d.ts
+/src/env.d.ts
 
 # macOS-specific files
 .DS_Store
