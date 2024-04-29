@@ -1,5 +1,26 @@
 ---
-
+const title = "Meet the Team!";
+const description =
+  "We’re an experienced team of builders with over 5 years of experience running institutional grade infrastructure for Fortune 100 companies.\
+  \
+  Through sustainable staking, self healing nodes and exotic server locations we're leading the industry to build more diversified and green node infrastructure.";
+const team = [
+  {
+    name: "Drew",
+    title: "Node Ops & Protocol Director",
+    image: "/teamdrew@2x.png",
+  },
+  {
+    name: "Clay",
+    title: "Business Operations & Marketing",
+    image: "/teamclay@2x.png",
+  },
+  {
+    name: "Anon Axolotl",
+    title: "Node Ops Director",
+    image: "/teamghost@2x.png",
+  },
+];
 ---
 
 <section
@@ -13,7 +34,7 @@
     <h1
       class="m-0 relative text-shadow-blockchain leading-[145%] font-bold font-body-s inline-block shrink-0 max-w-full z-[1] mq750:text-32xl mq750:leading-[51px] mq450:text-19xl mq450:leading-[38px]"
     >
-      Meet the Team!
+      {title}
     </h1>
   </div>
   <div
@@ -29,96 +50,36 @@
           class="w-[404px] relative leading-[145%] font-medium inline-block max-w-full mq450:text-base mq450:leading-[23px]"
         >
           <p class="m-0">
-            We’re an experienced team of builders with over 5 years of
-            experience running institutional grade infrastructure for Fortune
-            100 companies.
-          </p>
-          <p class="m-0">&nbsp;</p>
-          <p class="m-0">
-            Through sustainable staking, self healing nodes and exotic server
-            locations we're leading the industry to build more diversified and
-            green node infrastructure.
+            {description}
           </p>
         </div>
       </div>
       <div
-        class="w-[428px] mx-auto flex flex-col items-center justify-center gap-[32px] min-w-[428px] max-w-full text-9xl mq750:min-w-full mq450:gap-[16px] mq1100:flex-1"
+        class="w-[428px] mx-auto flex flex-col items-center justify-center gap-[32px] min-w-[428px] max-w-full text-9xl"
       >
-        <div
-          class="flex flex-row items-center justify-start gap-[8px] min-w-[428px] mq750:flex-wrap"
-        >
-          <img
-            class="h-[100px] w-[100px] relative object-cover min-h-[100px]"
-            loading="lazy"
-            alt=""
-            src="/teamdrew@2x.png"
-          />
+        {
+          team.map((member) => (
+            <div class="flex flex-row items-center justify-start gap-[8px] min-w-[428px]">
+              <img
+                class="h-[100px] w-[100px] relative object-cover min-h-[100px]"
+                loading="lazy"
+                alt=""
+                src={member.image}
+              />
 
-          <div
-            class="flex-1 rounded-8981xl bg-axol-coral box-border flex flex-row items-center justify-start py-6 px-8 min-w-[208px] border-b-[6px] border-solid border-cryptowave-sky"
-          >
-            <div class="flex flex-col items-start justify-start">
-              <h2
-                class="m-0 relative text-inherit leading-[100%] font-bold font-inherit inline-block min-w-[75px] mq450:text-3xl mq450:leading-[22px]"
-              >
-                Drew
-              </h2>
-              <div class="relative text-base leading-[145%] font-medium">
-                Node Ops & Protocol Director
+              <div class="flex-1 rounded-full bg-axol-coral box-border flex flex-row items-center justify-start py-6 px-8 min-w-[208px] border-b-[6px] border-solid border-cryptowave-sky">
+                <div class="flex flex-col items-start justify-start">
+                  <h2 class="m-0 relative text-inherit leading-[100%] font-bold font-inherit inline-block min-w-[75px] mq450:text-3xl mq450:leading-[22px]">
+                    {member.name}
+                  </h2>
+                  <div class="relative text-base leading-[145%] font-medium">
+                    {member.title}
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div
-          class="flex flex-row items-center justify-start gap-[8px] min-w-[428px] mq750:flex-wrap"
-        >
-          <img
-            class="h-[100px] w-[100px] relative rounded-81xl object-cover min-h-[100px]"
-            loading="lazy"
-            alt=""
-            src="/teamclay@2x.png"
-          />
-
-          <div
-            class="flex-1 rounded-8981xl bg-axol-coral box-border flex flex-row items-center justify-start py-6 px-8 min-w-[208px] border-b-[6px] border-solid border-cryptowave-sky"
-          >
-            <div class="flex-1 flex flex-col items-start justify-start">
-              <h2
-                class="m-0 relative text-inherit leading-[100%] font-bold font-inherit inline-block min-w-[63px] mq450:text-3xl mq450:leading-[22px]"
-              >
-                Clay
-              </h2>
-              <div class="relative text-base leading-[145%] font-medium">
-                Business Operations & Marketing
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="flex flex-row items-center justify-start gap-[8px] min-w-[428px] mq750:flex-wrap"
-        >
-          <img
-            class="h-[100px] w-[100px] relative object-cover min-h-[100px]"
-            loading="lazy"
-            alt=""
-            src="/teamghost@2x.png"
-          />
-
-          <div
-            class="flex-1 rounded-8981xl bg-axol-coral box-border flex flex-row items-center justify-start py-6 px-8 min-w-[147px] border-b-[6px] border-solid border-cryptowave-sky"
-          >
-            <div class="flex flex-col items-start justify-start">
-              <h2
-                class="m-0 relative text-inherit leading-[100%] font-bold font-inherit inline-block min-w-[84px] mq450:text-3xl mq450:leading-[22px]"
-              >
-                Ghost
-              </h2>
-              <div class="relative text-base leading-[145%] font-medium">
-                Node Ops Director
-              </div>
-            </div>
-          </div>
-        </div>
+          ))
+        }
       </div>
     </div>
     <div
