@@ -36,7 +36,7 @@ export default function Navbar() {
     return (
         <header className="fixed z-20 mt-8 md:mt-12 bg-axol-coral rounded-full shadow border-l-2 border-t-2 border-crypto-frost/75">
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-2 lg:px-8 gap-8" aria-label="Global">
-                <a href="#heroSection" className="-m-1.5 p-1.5">
+                <a href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Axol.io</span>
                     <img className="h-8 w-auto" src="/Logo.svg" alt="Axol.io" />
                 </a>

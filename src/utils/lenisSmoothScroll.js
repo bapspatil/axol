@@ -32,12 +32,21 @@ scrollButtons.forEach(button => {
             $el = document.getElementById(target.replace('#', ''));
 
         // Use lenis.scrollTo() to scroll the page to the right element
-        lenis.scrollTo($el, {
-            offset: -150,
-            immediate: false,
-            duration: 1.5,
-            easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
-        });
+        if (target === "#featuresSection") {
+            lenis.scrollTo($el, {
+                offset: 110, // TODO: Make 100 for #featuresSection
+                immediate: false,
+                duration: 1.5,
+                easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
+            });
+        } else {
+            lenis.scrollTo($el, {
+                offset: -100, // TODO: Make 100 for #featuresSection
+                immediate: false,
+                duration: 1.5,
+                easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
+            });
+        }
     });
 });
 
