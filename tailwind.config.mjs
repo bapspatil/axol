@@ -19,10 +19,15 @@ export default {
 				'body': ["'Plus Jakarta Sans'", 'sans-serif'],
 				'display': ["'Panamera'", 'sans-serif'],
 			},
+			borderRadius: {
+				DEFAULT: '6px',
+			},
+			borderWidth: {
+				'6': '6px',
+			},
 		},
 		spacing: {
 			'0': '0px',
-			'0.5': '2px',
 			'1': '4px',
 			'2': '8px',
 			'4': '16px',
