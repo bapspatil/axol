@@ -74,7 +74,7 @@ const cards: FeatureCard[] = [
 
 const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
   return (
-    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-crypto-frost" id={`feature-${card.id}`}>
+    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-crypto-frost" id={card.id.toString()}>
       <div
         id="feature-carousel"
         className="self-stretch flex flex-row items-start justify-start relative max-w-full"
