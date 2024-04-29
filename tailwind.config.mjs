@@ -6,14 +6,13 @@ export default {
 	theme: {
 		extend: {
 			colors: {
-				"brand-colors-decentralized-coral": "#e68476",
-				"brand-colors-shadow-blockchain": "#15002e",
-				"brand-colors-axol-coral": "#ffcd9c",
-				"brand-colors-node-indigo": "#28338b",
-				"brand-colors-cryptowave-sky": "#58a1c6",
-				"brand-colors-crypto-frost": "#fdfff9",
+				"crypto-frost": "#fdfff9",
+				"shadow-blockchain": "#15002e",
+				"axol-coral": "#ffcd9c",
+				"decentralized-coral": "#e68476",
+				"node-indigo": "#28338b",
+				"cryptowave-sky": "#58a1c6",
 			},
-			spacing: {},
 			fontFamily: {
 				'sans': ['"Plus Jakarta Sans"', 'sans-serif'],
 				'title': ["'Panamera'", 'sans-serif'],

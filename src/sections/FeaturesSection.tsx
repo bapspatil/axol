@@ -12,10 +12,10 @@ export default function FeaturesSection() {
   return (
     <section
       ref={targetRef}
-      className="relative h-[300vh] bg-brand-colors-cryptowave-sky py-16 gap-1"
+      className="relative h-[300vh] bg-cryptowave-sky py-16 gap-1"
       id="featuresSection"
     >
-      <h2 className="relative text-center w-full m-0 font-bold font-title text-h2 text-brand-colors-crypto-frost">
+      <h2 className="relative text-center w-full m-0 font-bold font-title text-h2 text-crypto-frost">
         What we offer
       </h2>
       <img
@@ -74,7 +74,7 @@ const cards: FeatureCard[] = [
 
 const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
   return (
-    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-brand-colors-crypto-frost" id={`feature-${card.id}`}>
+    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-crypto-frost" id={`feature-${card.id}`}>
       <div
         id="feature-carousel"
         className="self-stretch flex flex-row items-start justify-start relative max-w-full"
@@ -86,8 +86,8 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
           src={card.image}
         />
 
-        <div className="w-[553px] !m-[0] absolute bottom-[-60px] left-[calc(50%_-_276.5px)] rounded-full bg-brand-colors-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 min-h-[76px] max-w-full z-[1] border-b-[8px] border-solid border-brand-colors-node-indigo">
-          <h4 className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-brand-colors-node-indigo text-center">
+        <div className="w-[553px] !m-[0] absolute bottom-[-60px] left-[calc(50%_-_276.5px)] rounded-full bg-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 min-h-[76px] max-w-full z-[1] border-b-[8px] border-solid border-node-indigo">
+          <h4 className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-node-indigo text-center">
             {card.title}
           </h4>
         </div>

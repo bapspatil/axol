@@ -30,7 +30,7 @@ export default function Navbar() {
     const $isMenuOpen = useStore(isMenuOpen);
 
     return (
-        <header className="fixed top-0 z-50 mt-16 bg-brand-colors-axol-coral rounded-full shadow border-l-2 border-t-2 border-brand-colors-crypto-frost/75">
+        <header className="fixed top-0 z-50 mt-16 bg-axol-coral rounded-full shadow border-l-2 border-t-2 border-crypto-frost/75">
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-[32px] py-[8px] lg:px-8 gap-8" aria-label="Global">
                 <a href="#heroSection" className="-m-1.5 p-1.5">
                     <span className="sr-only">Axol.io</span>
@@ -48,7 +48,7 @@ export default function Navbar() {
                 </div>
                 <div className="hidden lg:flex lg:gap-x-4">
                     {navLinks.map((item) => (
-                        <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display leading-6 rounded-[4px] text-brand-colors-node-indigo lowercase hover:border-b-4 hover:border-brand-colors-node-indigo transition-all duration-300">
+                        <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display leading-6 rounded-[4px] text-node-indigo lowercase hover:border-b-4 hover:border-node-indigo transition-all duration-300">
                             {item.name}
                         </a>
                     ))}
