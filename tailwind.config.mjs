@@ -102,6 +102,21 @@ export default {
 				letterSpacing: '0em',
 				fontWeight: '600',
 			}],
+			'mobile-h1': ['2.2rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'mobile-h2': ['1.8rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
+			'mobile-h3': ['1.5rem', {
+				lineHeight: '100%',
+				letterSpacing: '0em',
+				fontWeight: '600',
+			}],
 			'nav': ['1rem', {
 				lineHeight: '145%',
 				letterSpacing: '0em',
