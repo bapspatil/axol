@@ -4,7 +4,11 @@ interface Props {
 }
 
 const { title } = Astro.props;
-import "../styles/globals.css";
+const description =
+  "Empowering institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America.";
+const richLinkPreview = "/metadata/rich-link-preview.jpg";
+const domainUrl = "https://axol.io";
+import "../styles/global.css";
 ---
 
 <!doctype html>
@@ -12,27 +16,42 @@ import "../styles/globals.css";
   <head>
     <title>{title}</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Astro description" />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={domainUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={richLinkPreview} />
+
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={domainUrl} />
+    <meta name="twitter:site" content="@axol_io" />
+    <meta property="twitter:title" content={title} /><meta
+      property="twitter:description"
+      content={description}
+    />
+    <meta property="twitter:image" content={richLinkPreview} />
     <meta name="robots" content="noindex" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Plus Jakarta Sans:ital,wght@0,500;0,700;0,800;1,500&display=swap"
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/metadata/apple-touch-icon.png"
     />
-    <style>
-      @media (max-width: 750px) {
-        .navbar-logo {
-          z-index: 2; /* Adjust the value as needed */
-          position: relative; /* Ensure the element is positioned */
-        }
-        .button-container {
-          z-index: 1; /* Ensure this is lower than the navbar logo's z-index */
-          position: relative; /* Ensure the element is positioned */
-        }
-      }
-    </style>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/metadata/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/metadata/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/metadata/site.webmanifest" />
+    <meta name="generator" content={Astro.generator} />
   </head>
   <body>
     <slot />

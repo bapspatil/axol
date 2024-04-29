@@ -74,7 +74,7 @@ const cards: FeatureCard[] = [
 
 const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
   return (
-    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-brand-colors-crypto-frost mq750:gap-[17px] mq1275:gap-[34px]">
+    <div className="w-[900px] shrink-0 flex flex-col items-end justify-start pt-0 px-0 pb-[0px] box-border gap-[68px] max-w-full text-xl text-brand-colors-crypto-frost" id={`feature-${card.id}`}>
       <div
         id="feature-carousel"
         className="self-stretch flex flex-row items-start justify-start relative max-w-full"
@@ -87,13 +87,13 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
         />
 
         <div className="w-[553px] !m-[0] absolute bottom-[-60px] left-[calc(50%_-_276.5px)] rounded-full bg-brand-colors-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 min-h-[76px] max-w-full z-[1] border-b-[8px] border-solid border-brand-colors-node-indigo">
-          <h4 className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-brand-colors-node-indigo text-center mq750:text-10xl mq750:leading-[29px] mq450:text-3xl mq450:leading-[22px]">
+          <h4 className="w-[545px] relative font-title text-h4 text-17xl leading-[100%] inline-block text-brand-colors-node-indigo text-center">
             {card.title}
           </h4>
         </div>
       </div>
       <div className="w-[1120px] flex flex-row items-start justify-center py-0 px-5 box-border max-w-full">
-        <p className="w-[720px] relative font-body text-body-md text-center inline-block shrink-0 max-w-full mq450:text-base mq450:leading-[0px]">
+        <p className="w-[720px] relative font-body text-body-md text-center inline-block shrink-0 max-w-full">
           {card.description}
         </p>
       </div>

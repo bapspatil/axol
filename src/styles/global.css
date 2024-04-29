@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'Panamera';
+    font-style: normal;
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    src: url(/fonts/Panamera-Variable.ttf) format('truetype');
+  }
+  @font-face {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 100 200 300 400 500 600 700 800 900;
+    font-display: swap;
+    src: url(/fonts/PlusJakartaSans-Variable.ttf) format('truetype');
+  }
+}
