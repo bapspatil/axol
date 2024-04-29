@@ -16,48 +16,53 @@ import Separator from "../components/Separator.astro";
     <div
       class="w-full relative flex flex-col justify-start items-center overflow-x-clip"
     >
-      <!-- <Navbar /> Astro Component -->
       <Navbar client:load />
       <HeroSection />
       <Separator
-        topVector="/herobottomvector@2x.png"
-        bottomVector="/herobottomtechgrid@2x.png"
-        mixBlendMode="mix-blend-exclusion"
+        topVector="1"
+        topVectorColor="fill-decentralized-coral"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-exclusion opacity-50"
         backgroundColor="bg-cryptowave-sky"
       />
       <FeaturesSection client:only="react" />
       <Separator
-        topVector="/vector-11.svg"
-        bottomVector="/detailsseparatortechgrid@2x.png"
-        mixBlendMode="mix-blend-screen"
+        topVector="2"
+        topVectorColor="fill-cryptowave-sky"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
         backgroundColor="bg-crypto-frost"
       />
       <AUMSection />
       <Separator
-        topVector="/vector-12.svg"
-        bottomVector="/grid19-32@2x.png"
-        mixBlendMode="mix-blend-difference"
+        topVector="1"
+        topVectorColor="fill-crypto-frost"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-difference opacity-[15%]"
         backgroundColor="bg-node-indigo"
       />
       <UseCasesSection />
       <Separator
-        topVector="/vector-13.svg"
-        bottomVector="/detailsseparatortechgrid@2x.png"
-        mixBlendMode="mix-blend-screen"
+        topVector="2"
+        topVectorColor="fill-node-indigo"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
         backgroundColor="bg-decentralized-coral"
       />
       <TeamSection />
       <Separator
-        topVector="/section-red@2x.png"
-        bottomVector="/detailsseparatortechgrid@2x.png"
-        mixBlendMode="mix-blend-screen"
+        topVector="1"
+        topVectorColor="fill-decentralized-coral"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
         backgroundColor="bg-axol-coral"
       />
       <ContactSection />
       <Separator
-        topVector="/vector-14.svg"
-        bottomVector="/contactseparatortechgrid.svg"
-        mixBlendMode="mix-blend-difference"
+        topVector="2"
+        topVectorColor="fill-axol-coral"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-difference opacity-[15%]"
         backgroundColor="bg-decentralized-coral"
       />
       <Footer />
