@@ -1,28 +1,38 @@
 ---
+import { I } from "../../dist/_astro/resolve-element.B_SW4Ehu";
+
 const useCases = [
   {
     title: "VCs",
     description:
       "Strategically maximize potential upside with our discreet airdrop farming packages designed specifically for incentivized testnets.",
     image: "/images/use-case-icon-1.svg",
+    span: "3",
+    imageSize: "w-16 h-16 md:w-24 md:h-24",
   },
   {
     title: "Retail",
     description:
       "Perform non-custodial staking through token delegation to our validators.",
     image: "/images/use-case-icon-2.svg",
+    span: "2",
+    imageSize: "w-16 h-16",
   },
   {
     title: "Bitcoin Miners",
     description:
       "Seamlessly earn yield on staked Bitcoin through our innovative solutions.",
     image: "/images/use-case-icon-3.svg",
+    span: "2",
+    imageSize: "w-16 h-16",
   },
   {
     title: "Protocol Foundations",
     description:
       "Diversify & strengthen your validator set by leveraging our carbon-neutral infra in LATAM.",
     image: "/images/use-case-icon-4.svg",
+    span: "3",
+    imageSize: "w-16 h-16 md:w-24 md:h-24",
   },
 ];
 ---
@@ -41,65 +51,27 @@ const useCases = [
   <div
     class="grid md:auto-rows-auto grid-cols-1 md:grid-cols-5 gap-6 max-w-192 z-10"
   >
-    <div
-      class="row-span-1 md:col-span-3 hover:shadow-xl transition-all duration-200 shadow-input bg-shadow-blockchain justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8"
-    >
-      <div class="justify-between items-start gap-4 md:gap-8 flex flex-row">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-          <h3 class="text-crypto-frost font-title text-h5 text-left">
-            {useCases[0].title}
-          </h3>
-          <p class="text-cryptowave-sky font-body text-body-sm text-left">
-            {useCases[0].description}
-          </p>
+    {
+      useCases.map((useCase) => (
+        <div
+          class={`row-span-1 md:col-span-${useCase.span} transition-all duration-300 shadow-input bg-shadow-blockchain hover:bg-cryptowave-sky justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8 group hover:scale-105`}
+        >
+          <div class="justify-between items-start gap-4 md:gap-8 flex flex-row">
+            <div class="flex-col justify-start items-start gap-2 inline-flex">
+              <h3 class="text-crypto-frost font-title text-h5 text-left">
+                {useCase.title}
+              </h3>
+              <p class="text-cryptowave-sky group-hover:text-crypto-frost transition-all duration-300 font-body text-body-sm text-left">
+                {useCase.description}
+              </p>
+            </div>
+            <img
+              class={`${useCase.imageSize} group-hover:mix-blend-plus-lighter group-hover:scale-110  transition-all duration-300`}
+              src={useCase.image}
+            />
+          </div>
         </div>
-        <img class="w-16 h-16 md:w-24 md:h-24" src={useCases[0].image} />
-      </div>
-    </div>
-    <div
-      class="row-span-1 md:col-span-2 hover:shadow-xl transition-all duration-200 shadow-input bg-shadow-blockchain justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8"
-    >
-      <div class="justify-between items-start gap-2 flex flex-row">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-          <h3 class="text-crypto-frost font-title text-h5 text-left">
-            {useCases[1].title}
-          </h3>
-          <p class="text-cryptowave-sky font-body text-body-sm text-left">
-            {useCases[1].description}
-          </p>
-        </div>
-        <img class="w-16 h-16" src={useCases[1].image} />
-      </div>
-    </div>
-    <div
-      class="row-span-1 md:col-span-2 hover:shadow-xl transition-all duration-200 shadow-input bg-shadow-blockchain justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8"
-    >
-      <div class="justify-between items-start gap-2 flex flex-row">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-          <h3 class="text-crypto-frost font-title text-h5 text-left">
-            {useCases[2].title}
-          </h3>
-          <p class="text-cryptowave-sky font-body text-body-sm text-left">
-            {useCases[2].description}
-          </p>
-        </div>
-        <img class="w-16 h-16" src={useCases[2].image} />
-      </div>
-    </div>
-    <div
-      class="row-span-1 md:col-span-3 hover:shadow-xl transition-all duration-200 shadow-input bg-shadow-blockchain justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8"
-    >
-      <div class="justify-between items-start gap-4 md:gap-8 flex flex-row">
-        <div class="flex-col justify-start items-start gap-2 inline-flex">
-          <h3 class="text-crypto-frost font-title text-h5 text-left">
-            {useCases[3].title}
-          </h3>
-          <p class="text-cryptowave-sky font-body text-body-sm text-left">
-            {useCases[3].description}
-          </p>
-        </div>
-        <img class="w-16 h-16 md:w-24 md:h-24" src={useCases[3].image} />
-      </div>
-    </div>
+      ))
+    }
   </div>
 </section>
