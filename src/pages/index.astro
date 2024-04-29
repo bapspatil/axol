@@ -25,7 +25,7 @@ import Separator from "../components/Separator.astro";
         mixBlendMode="mix-blend-exclusion"
         backgroundColor="bg-cryptowave-sky"
       />
-      <FeaturesSection client:load />
+      <FeaturesSection client:only="react" />
       <Separator
         topVector="/vector-11.svg"
         bottomVector="/detailsseparatortechgrid@2x.png"

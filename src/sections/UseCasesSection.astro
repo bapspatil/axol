@@ -5,7 +5,7 @@ const useCases = [
     description:
       "Strategically maximize potential upside with our discreet airdrop farming packages designed specifically for incentivized testnets.",
     image: "/images/use-case-icon-1.svg",
-    span: "3",
+    span: "md:col-span-3",
     imageSize: "w-16 h-16 md:w-24 md:h-24",
   },
   {
@@ -13,7 +13,7 @@ const useCases = [
     description:
       "Perform non-custodial staking through token delegation to our validators.",
     image: "/images/use-case-icon-2.svg",
-    span: "2",
+    span: "md:col-span-2",
     imageSize: "w-16 h-16",
   },
   {
@@ -21,7 +21,7 @@ const useCases = [
     description:
       "Seamlessly earn yield on staked Bitcoin through our innovative solutions.",
     image: "/images/use-case-icon-3.svg",
-    span: "2",
+    span: "md:col-span-2",
     imageSize: "w-16 h-16",
   },
   {
@@ -29,7 +29,7 @@ const useCases = [
     description:
       "Diversify & strengthen your validator set by leveraging our carbon-neutral infra in LATAM.",
     image: "/images/use-case-icon-4.svg",
-    span: "3",
+    span: "md:col-span-3",
     imageSize: "w-16 h-16 md:w-24 md:h-24",
   },
 ];
@@ -52,7 +52,7 @@ const useCases = [
     {
       useCases.map((useCase) => (
         <div
-          class={`row-span-1 md:col-span-${useCase.span} transition-all duration-300 shadow-input bg-shadow-blockchain hover:bg-cryptowave-sky justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8 group hover:scale-105`}
+          class={`row-span-1 ${useCase.span} transition-all duration-300 shadow-input bg-shadow-blockchain hover:bg-cryptowave-sky justify-between flex flex-col border-b-8 border-cryptowave-sky rounded p-8 group hover:scale-105`}
         >
           <div class="justify-between items-start gap-4 md:gap-8 flex flex-row">
             <div class="flex-col justify-start items-start gap-2 inline-flex">
