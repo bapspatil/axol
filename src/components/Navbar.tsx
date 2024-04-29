@@ -5,10 +5,6 @@ import { Dialog } from "@headlessui/react";
 
 const navLinks = [
     {
-        name: "Home",
-        href: "#homeSection",
-    },
-    {
         name: "Features",
         href: "#featuresSection",
     },
@@ -23,6 +19,14 @@ const navLinks = [
     {
         name: "Contact",
         href: "#contactSection",
+    },
+    {
+        name: "Blog",
+        href: "/blog",
+    },
+    {
+        name: "Faucet",
+        href: "https://faucet.axol.io",
     },
 ];
 
