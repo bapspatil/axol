@@ -33,11 +33,15 @@ export default function Navbar() {
     const $isMenuOpen = useStore(isMenuOpen);
 
     return (
-        <header className="fixed z-20 mt-8 md:mt-12 bg-axol-coral rounded-full shadow border-l-2 border-t-2 border-crypto-frost/75">
-            <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-2 lg:px-8 gap-8" aria-label="Global">
-                <a href="/" className="-m-1.5 p-1.5">
+        <header className="fixed z-20 mt-8 md:mt-12 inline-flex flex-col items-center justify-start">
+            <a className="hidden md:inline-flex w-fit h-auto px-6 py-1 bg-axol-coral border-x-2 border-t-2 border-transparent hover:border-node-indigo transition-colors duration-300 rounded-tl-full rounded-tr-full justify-center items-center gap-2  group" href="#">
+                <img src="/images/icon-announcement.svg" alt="Announcement" />
+                <p className="text-node-indigo text-body-sm font-body ">Now running infra for Lido, Gnosis, Origin!</p>
+            </a>
+            <nav className="rounded-full border-l-2 border-t-2 border-crypto-frost/75 bg-axol-coral mx-auto flex max-w-7xl items-center justify-between px-8 pb-2 pt-[10px] lg:px-8 gap-12 shadow-md" aria-label="Global">
+                <a href="/" className="pb-[4px]">
                     <span className="sr-only">Axol.io</span>
-                    <img className="h-8 w-auto" src="/images/logo-primary-node-indigo.svg" alt="Axol.io" />
+                    <img className="h-10 w-auto" src="/images/logo-primary-node-indigo.svg" alt="Axol.io Logo" />
                 </a>
                 <div className="flex lg:hidden">
                     <button
@@ -49,9 +53,9 @@ export default function Navbar() {
                         <img src="/images/icon-menu.svg" className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
-                <div className="hidden lg:flex lg:gap-x-4">
+                <div className="hidden lg:flex lg:gap-x-6">
                     {navLinks.map((item) => (
-                        <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display leading-6 rounded-[4px] text-node-indigo lowercase hover:border-b-4 hover:border-node-indigo transition-all duration-300">
+                        <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display rounded-[4px] text-node-indigo lowercase border-b-4 border-transparent hover:border-node-indigo transition-all duration-300">
                             {item.name}
                         </a>
                     ))}
@@ -66,7 +70,7 @@ export default function Navbar() {
                             <img
                                 className="h-8 w-auto"
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
-                                alt=""
+                                alt="Axol.io Logo"
                             />
                         </a>
                         <button
