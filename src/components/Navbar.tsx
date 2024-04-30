@@ -15,26 +15,32 @@ const navLinks = [
     {
         name: "Features",
         href: "#featuresSection",
+        target: "_self",
     },
     {
         name: "Use Cases",
         href: "#useCasesSection",
+        target: "_self",
     },
     {
         name: "Team",
         href: "#teamSection",
+        target: "_self",
     },
     {
         name: "Contact",
         href: "#contactSection",
+        target: "_self",
     },
     // {
     //     name: "Blog",
     //     href: "/blog",
+    //target: "_self",
     // },
     {
         name: "Faucet",
         href: "https://faucet.axol.io",
+        target: "_blank",
     },
 ];
 
@@ -93,7 +99,12 @@ export default function Navbar() {
                     </div>
                     <div className="hidden md:flex md:gap-x-6">
                         {navLinks.map((item) => (
-                            <a key={item.name} href={item.href} data-target={item.href} className="text-nav font-display rounded-[4px] text-node-indigo lowercase border-b-4 border-transparent hover:border-node-indigo transition-all duration-300">
+                            <a
+                                key={item.name}
+                                href={item.href}
+                                target={item.target}
+                                data-target={item.href}
+                                className="text-nav font-display rounded-[4px] text-node-indigo lowercase border-b-4 border-transparent hover:border-node-indigo transition-all duration-300">
                                 {item.name}
                             </a>
                         ))}
@@ -121,6 +132,7 @@ export default function Navbar() {
                                 <a
                                     key={item.name}
                                     href={item.href}
+                                    target={item.target}
                                     className="flex w-fit text-nav font-display rounded-[4px] text-node-indigo lowercase border-b-4 border-transparent hover:border-node-indigo transition-all duration-300"
                                 >
                                     {item.name}
