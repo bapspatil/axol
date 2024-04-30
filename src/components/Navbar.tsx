@@ -28,10 +28,10 @@ const navLinks = [
         name: "Contact",
         href: "#contactSection",
     },
-    {
-        name: "Blog",
-        href: "/blog",
-    },
+    // {
+    //     name: "Blog",
+    //     href: "/blog",
+    // },
     {
         name: "Faucet",
         href: "https://faucet.axol.io",
