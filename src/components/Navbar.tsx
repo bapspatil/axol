@@ -32,10 +32,10 @@ const navLinks = [
     //     name: "Blog",
     //     href: "/blog",
     // },
-    {
-        name: "Faucet",
-        href: "https://faucet.axol.io",
-    },
+    // {
+    //     name: "Faucet",
+    //     href: "https://faucet.axol.io",
+    // },
 ];
 
 const navContainer = {
