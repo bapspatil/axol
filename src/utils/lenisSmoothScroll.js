@@ -34,14 +34,14 @@ scrollButtons.forEach(button => {
         // Use lenis.scrollTo() to scroll the page to the right element
         if (target === "#featuresSection") {
             lenis.scrollTo($el, {
-                offset: 110, // TODO: Make 100 for #featuresSection
+                offset: 110,
                 immediate: false,
                 duration: 1.5,
                 easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net
             });
         } else {
             lenis.scrollTo($el, {
-                offset: -100, // TODO: Make 100 for #featuresSection
+                offset: -100,
                 immediate: false,
                 duration: 1.5,
                 easing: (x) => (x < 0.5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2), // https://easings.net

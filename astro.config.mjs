@@ -11,4 +11,5 @@ export default defineConfig({
   integrations: [react(), tailwind(), mdx(), sitemap(), partytown()],
   output: "server",
   adapter: cloudflare(),
+  site: 'https://axol.io',
 });
