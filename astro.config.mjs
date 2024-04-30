@@ -11,9 +11,4 @@ export default defineConfig({
   integrations: [react(), tailwind(), mdx(), sitemap(), partytown()],
   output: "server",
   adapter: cloudflare(),
-  // vite: {
-  //   define: {
-  //     'process.env.CLOUDFLARE_TURNSTILE_SITEKEY': JSON.stringify(process.env.CLOUDFLARE_TURNSTILE_SITEKEY)
-  //   }
-  // }
 });
