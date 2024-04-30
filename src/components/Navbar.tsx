@@ -64,14 +64,13 @@ export default function Navbar() {
 
     return (
         <>
-
-            <a className={`fixed z-20 hidden md:flex flex-row mt-0 px-6 py-1 bg-axol-coral border-transparent md:border-l-2 md:border-b-2 md:border-crypto-frost/75 hover:border-node-indigo transition-all duration-300 rounded-bl-full rounded-br-full justify-center items-center shadow-md gap-2 ` + (isInView ? "md:hidden -translate-y-32" : "md:visible translate-y-0")} href="#"
+            <a className={`fixed z-20 hidden md:flex flex-row mt-0 px-6 py-1 bg-axol-coral border-transparent md:border-l-2 md:border-b-2 md:border-crypto-frost/75 hover:border-node-indigo transition-all duration-300 rounded-bl-full rounded-br-full justify-center items-center shadow-md gap-2 ` + (isInView ? "md:hidden -translate-y-32" : "md:visible")} href="#"
             >
                 <img src={announcement.icon} alt="Announcement" />
                 <p className="text-node-indigo text-body-sm font-body">{announcement.text}</p>
             </a>
             <header className="fixed z-20 mt-12 md:mt-12 w-full md:w-auto inline-flex flex-col items-center justify-start">
-                <a className={`hidden md:inline-flex w-fit h-auto px-6 py-1 bg-axol-coral border-x-2 border-t-2 border-transparent hover:border-node-indigo transition-all duration-300 rounded-tl-full rounded-tr-full justify-center items-center gap-2 ` + (isInView ? "md:visible translate-y-0" : "md:invisible -translate-y-32")} href="#"
+                <a className={`hidden md:inline-flex w-fit h-auto px-6 py-1 bg-axol-coral border-x-2 border-t-2 border-transparent hover:border-node-indigo transition-all duration-300 rounded-tl-full rounded-tr-full justify-center items-center gap-2 ` + (isInView ? "md:visible" : "md:invisible -translate-y-32")} href="#"
                 >
                     <img src={announcement.icon} alt="Announcement" />
                     <p className="text-node-indigo text-body-sm font-body ">{announcement.text}</p>

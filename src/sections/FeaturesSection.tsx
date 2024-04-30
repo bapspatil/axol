@@ -1,4 +1,4 @@
-import { motion, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll, MotionValue } from "framer-motion";
 import { useRef } from "react";
 
 const cards: FeatureCard[] = [
@@ -32,13 +32,78 @@ const cards: FeatureCard[] = [
   },
 ];
 
+function Dots({ dot1ScaleProgress, dot2ScaleProgress, dot3ScaleProgress, dot4ScaleProgress, dot1BackgroundProgress, dot2BackgroundProgress, dot3BackgroundProgress, dot4BackgroundProgress, scrollYProgress }: { dot1ScaleProgress: MotionValue<number>, dot2ScaleProgress: MotionValue<number>, dot3ScaleProgress: MotionValue<number>, dot4ScaleProgress: MotionValue<number>, dot1BackgroundProgress: MotionValue<string>, dot2BackgroundProgress: MotionValue<string>, dot3BackgroundProgress: MotionValue<string>, dot4BackgroundProgress: MotionValue<string>, scrollYProgress: MotionValue<number> }) {
+  return (
+    <div className="w-full absolute bottom-[10%] hidden md:flex flex-row items-center justify-center overflow-hidden">
+      <div className="w-fit h-auto px-4 py-2 rounded-full bg-crypto-frost bg-opacity-50 justify-center items-center gap-4 flex flex-row">
+        < motion.button
+          onClick={() => {
+            scrollYProgress.set(0);
+          }}>
+          <motion.div
+            style={{
+              scale: dot1ScaleProgress,
+              background: dot1BackgroundProgress,
+            }}
+            className={`w-4 h-4 rounded-full `}
+          ></motion.div>
+        </motion.button>
+        <motion.button
+          onClick={() => {
+            scrollYProgress.set(0.30);
+          }}>
+          <motion.div
+            style={{
+              scale: dot2ScaleProgress,
+              background: dot2BackgroundProgress,
+            }}
+            className={`w-4 h-4 rounded-full `}
+          ></motion.div>
+        </motion.button>
+        <motion.button
+          onClick={() => {
+            scrollYProgress.set(0.60);
+          }}>
+          <motion.div
+            style={{
+              scale: dot3ScaleProgress,
+              background: dot3BackgroundProgress,
+            }}
+            className={`w-4 h-4 rounded-full `}
+          ></motion.div>
+        </motion.button>
+        <motion.button
+          onClick={() => {
+            scrollYProgress.set(0.90);
+          }}>
+          <motion.div
+            style={{
+              scale: dot4ScaleProgress,
+              background: dot4BackgroundProgress,
+            }}
+            className={`w-4 h-4 rounded-full`}
+          ></motion.div>
+        </motion.button>
+      </div>
+    </div >
+  );
+}
+
 export default function FeaturesSection() {
   const targetRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
-
   const x = useTransform(scrollYProgress, [0, 1], ["40%", "-50%"]);
+  const dot1ScaleProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [1.5, 1, 1, 1]);
+  const dot2ScaleProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [1, 1.5, 1, 1]);
+  const dot3ScaleProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [1, 1, 1.5, 1]);
+  const dot4ScaleProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], [1, 1, 1, 1.5]);
+
+  const dot1BackgroundProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], ["#28338B", "#58A1C6", "#58A1C6", "#58A1C6"]);
+  const dot2BackgroundProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], ["#58A1C6", "#28338B", "#58A1C6", "#58A1C6"]);
+  const dot3BackgroundProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], ["#58A1C6", "#58A1C6", "#28338B", "#58A1C6"]);
+  const dot4BackgroundProgress = useTransform(scrollYProgress, [0, 0.3, 0.6, 0.9], ["#58A1C6", "#58A1C6", "#58A1C6", "#28338B"]);
 
   return (
     <section
@@ -60,6 +125,7 @@ export default function FeaturesSection() {
             return <FeatureCardUI card={card} />;
           })}
         </motion.div>
+        <Dots dot1ScaleProgress={dot1ScaleProgress} dot2ScaleProgress={dot2ScaleProgress} dot3ScaleProgress={dot3ScaleProgress} dot4ScaleProgress={dot4ScaleProgress} dot1BackgroundProgress={dot1BackgroundProgress} dot2BackgroundProgress={dot2BackgroundProgress} dot3BackgroundProgress={dot3BackgroundProgress} dot4BackgroundProgress={dot4BackgroundProgress} scrollYProgress={scrollYProgress} />
         <div className="w-full flex md:hidden flex-col gap-8 mt-8">
           {cards.map((card) => {
             return <FeatureCardUI card={card} />;
