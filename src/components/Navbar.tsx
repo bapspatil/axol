@@ -1,4 +1,3 @@
-import { PiListDuotone, PiXDuotone } from "react-icons/pi";
 import { useStore } from '@nanostores/react';
 import { isMenuOpen } from '../utils/store';
 import { Dialog } from "@headlessui/react";
@@ -38,7 +37,7 @@ export default function Navbar() {
             <nav className="mx-auto flex max-w-7xl items-center justify-between px-8 py-2 lg:px-8 gap-8" aria-label="Global">
                 <a href="/" className="-m-1.5 p-1.5">
                     <span className="sr-only">Axol.io</span>
-                    <img className="h-8 w-auto" src="/Logo.svg" alt="Axol.io" />
+                    <img className="h-8 w-auto" src="/images/logo-primary-node-indigo.svg" alt="Axol.io" />
                 </a>
                 <div className="flex lg:hidden">
                     <button
@@ -47,7 +46,7 @@ export default function Navbar() {
                         onClick={() => isMenuOpen.set(!$isMenuOpen)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <PiListDuotone className="h-6 w-6" aria-hidden="true" />
+                        <img src="/images/icon-menu.svg" className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-4">
@@ -76,7 +75,7 @@ export default function Navbar() {
                             onClick={() => isMenuOpen.set(!$isMenuOpen)}
                         >
                             <span className="sr-only">Close menu</span>
-                            <PiXDuotone className="h-6 w-6" aria-hidden="true" />
+                            <img src="/images/icon-close.svg" className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="mt-6 flow-root">
