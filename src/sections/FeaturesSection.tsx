@@ -37,6 +37,7 @@ function Dots({ dot1ScaleProgress, dot2ScaleProgress, dot3ScaleProgress, dot4Sca
     <div className="w-full absolute bottom-[10%] hidden md:flex flex-row items-center justify-center overflow-hidden">
       <div className="w-fit h-auto px-4 py-2 rounded-full bg-crypto-frost bg-opacity-50 justify-center items-center gap-4 flex flex-row">
         < motion.button
+          aria-label="Dot 1"
           onClick={() => {
             scrollYProgress.set(0);
           }}>
@@ -49,6 +50,7 @@ function Dots({ dot1ScaleProgress, dot2ScaleProgress, dot3ScaleProgress, dot4Sca
           ></motion.div>
         </motion.button>
         <motion.button
+          aria-label="Dot 2"
           onClick={() => {
             scrollYProgress.set(0.30);
           }}>
@@ -61,6 +63,7 @@ function Dots({ dot1ScaleProgress, dot2ScaleProgress, dot3ScaleProgress, dot4Sca
           ></motion.div>
         </motion.button>
         <motion.button
+          aria-label="Dot 3"
           onClick={() => {
             scrollYProgress.set(0.60);
           }}>
@@ -73,6 +76,7 @@ function Dots({ dot1ScaleProgress, dot2ScaleProgress, dot3ScaleProgress, dot4Sca
           ></motion.div>
         </motion.button>
         <motion.button
+          aria-label="Dot 4"
           onClick={() => {
             scrollYProgress.set(0.90);
           }}>
@@ -157,9 +161,9 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
         />
 
         <div className="w-auto absolute -bottom-8 rounded-full bg-axol-coral box-border flex flex-row items-start justify-start py-4 px-8 border-b-[8px] border-solid border-node-indigo">
-          <h4 className="w-auto relative font-title text-mobile-h3 md:text-h4 text-17xl leading-[100%] inline-block text-node-indigo text-center">
+          <h3 className="w-auto relative font-title text-mobile-h3 md:text-h4 text-17xl leading-[100%] inline-block text-node-indigo text-center">
             {card.title}
-          </h4>
+          </h3>
         </div>
       </div>
       <div className="w-[720px] flex flex-row items-center justify-center py-0 px-5 box-border max-w-full">

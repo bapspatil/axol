@@ -84,6 +84,7 @@ export default function Navbar() {
                         <button
                             type="button"
                             className="flex md:hidden p-2 rounded-[6px] bg-axol-coral border-x border-t border-b-4 border-node-indigo"
+                            aria-label="Menu button"
                             onClick={() => isMenuOpen.set(!$isMenuOpen)}
                         >
                             <span className="sr-only">Open main menu</span>
@@ -104,6 +105,7 @@ export default function Navbar() {
                             <button
                                 type="button"
                                 className="flex p-2 rounded-[6px] bg-axol-coral border-x border-t border-b border-node-indigo"
+                                aria-label="Close button"
                                 onClick={() => isMenuOpen.set(!$isMenuOpen)}
                             >
                                 <span className="sr-only">Close menu</span>
