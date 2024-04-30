@@ -87,7 +87,7 @@ export default function Navbar() {
                             onClick={() => isMenuOpen.set(!$isMenuOpen)}
                         >
                             <span className="sr-only">Open main menu</span>
-                            <img src="/images/icon-menu.svg" className="h-8 w-8" aria-hidden="true" />
+                            <img src="/images/icon-menu.svg" className="h-8 w-8" aria-hidden="true" alt="Menu icon" />
                         </button>
                     </div>
                     <div className="hidden md:flex md:gap-x-6">
@@ -107,7 +107,7 @@ export default function Navbar() {
                                 onClick={() => isMenuOpen.set(!$isMenuOpen)}
                             >
                                 <span className="sr-only">Close menu</span>
-                                <img src="/images/icon-close.svg" className="h-8 w-8" aria-hidden="true" />
+                                <img src="/images/icon-close.svg" className="h-8 w-8" aria-hidden="true" alt="Close menu icon" />
                             </button>
                         </div>
                         <motion.div className=" bg-axol-coral px-24 py-6 items-center justify-center text-center border-x border-t border-b-6 border-node-indigo rounded-[6px] flex flex-col gap-6"
