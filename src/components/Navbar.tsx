@@ -5,10 +5,10 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from 'react';
 import Ticker from 'framer-motion-ticker';
 
-
 const announcement = {
     text: "Now running infra for Lido, Gnosis, Origin!",
     icon: "/images/icon-announcement.svg",
+    url: "#"
 }
 
 const navLinks = [
@@ -64,13 +64,13 @@ export default function Navbar() {
 
     return (
         <>
-            <a className={`fixed z-20 hidden md:flex flex-row mt-0 px-6 py-1 bg-axol-coral border-transparent md:border-l-2 md:border-b-2 md:border-crypto-frost/75 hover:border-node-indigo transition-all duration-300 rounded-bl-full rounded-br-full justify-center items-center shadow-md gap-2 ` + (isInView ? "md:hidden -translate-y-32" : "md:visible")} href="#"
+            <a className={`fixed z-20 hidden md:flex flex-row mt-0 px-6 py-1 bg-axol-coral border-transparent md:border-l-2 md:border-b-2 md:border-crypto-frost/75 hover:border-node-indigo transition-all duration-300 rounded-bl-full rounded-br-full justify-center items-center shadow-md gap-2 ` + (isInView ? "md:hidden -translate-y-32" : "md:visible")} href={announcement.url}
             >
                 <img src={announcement.icon} alt="Announcement" />
                 <p className="text-node-indigo text-body-sm font-body">{announcement.text}</p>
             </a>
             <header className="fixed z-20 mt-12 md:mt-12 w-full md:w-auto inline-flex flex-col items-center justify-start">
-                <a className={`hidden md:inline-flex w-fit h-auto px-6 py-1 bg-axol-coral border-x-2 border-t-2 border-transparent hover:border-node-indigo transition-all duration-300 rounded-tl-full rounded-tr-full justify-center items-center gap-2 ` + (isInView ? "md:visible" : "md:invisible -translate-y-32")} href="#"
+                <a className={`hidden md:inline-flex w-fit h-auto px-6 py-1 bg-axol-coral border-x-2 border-t-2 border-transparent hover:border-node-indigo transition-all duration-300 rounded-tl-full rounded-tr-full justify-center items-center gap-2 ` + (isInView ? "md:visible" : "md:invisible -translate-y-32")} href={announcement.url}
                 >
                     <img src={announcement.icon} alt="Announcement" />
                     <p className="text-node-indigo text-body-sm font-body ">{announcement.text}</p>
@@ -130,12 +130,12 @@ export default function Navbar() {
             </header >
             <div className="fixed md:static z-20 md:z-0 w-full md:w-0 flex md:block md:h-0 flex-row mt-0 py-2 md:py-0 bg-axol-coral shadow-md gap-2">
                 <Ticker duration={20} >
-                    <a className="flex flex-row gap-2 mx-2" href="#"
+                    <a className="flex flex-row gap-2 mx-2" href={announcement.url}
                     >
                         <img src={announcement.icon} alt="Announcement" />
                         <p className="text-node-indigo text-body-sm font-body">{announcement.text}</p>
                     </a>
-                    <a className="flex flex-row gap-2 mx-2" href="#"
+                    <a className="flex flex-row gap-2 mx-2" href={announcement.url}
                     >
                         <img src={announcement.icon} alt="Announcement" />
                         <p className="text-node-indigo text-body-sm font-body">{announcement.text}</p>
