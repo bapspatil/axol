@@ -16,7 +16,7 @@ import Separator from "../components/Separator.astro";
     <div
       class="w-full relative flex flex-col justify-start items-center overflow-x-clip"
     >
-      <Navbar client:load />
+      <Navbar client:only="react" />
       <HeroSection />
       <Separator
         topVector="1"
