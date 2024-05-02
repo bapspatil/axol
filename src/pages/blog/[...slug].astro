@@ -31,9 +31,9 @@ const { Content } = await entry.render()
 <Layout
   title={title}
   description={description}
-  richLinkPreview={heroImage}>
+  richLinkPreview={heroImage + ""}>
   <main
-    class="relative flex w-full flex-col gap-4 overflow-x-hidden bg-node-indigo pb-8 pt-32 text-shadow-blockchain antialiased md:px-16 md:px-4 md:pb-16 md:pt-44 lg:pt-48">
+    class="relative flex w-full flex-col gap-4 overflow-x-hidden bg-node-indigo pb-8 pt-32 text-shadow-blockchain antialiased md:px-16 md:pb-16 md:pt-44 lg:pt-48">
     <div
       class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-start rounded-lg md:px-4">
       <Button
@@ -59,7 +59,7 @@ const { Content } = await entry.render()
           id="homeSection"
           class="not-format flex flex-col gap-4">
           <Image
-            src={heroImage}
+            src={heroImage + ""}
             alt={title}
             width={1200}
             height={630}
