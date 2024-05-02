@@ -1,32 +1,32 @@
-import { motion, useTransform, useScroll, MotionValue } from 'framer-motion'
-import { useRef } from 'react'
+import { motion, useTransform, useScroll, MotionValue } from "framer-motion"
+import { useRef } from "react"
 
 const cards: FeatureCard[] = [
     {
-        image: '/images/feature-1.webp',
-        title: 'White Label Nodes',
+        image: "/images/feature-1.webp",
+        title: "White Label Nodes",
         description:
-            'Outsource your node infrastructure to seasoned experts while promoting your personally branded nodes. We run institutional grade node infrastructure as a service.',
+            "Outsource your node infrastructure to seasoned experts while promoting your personally branded nodes. We run institutional grade node infrastructure as a service.",
         id: 1,
     },
     {
-        image: '/images/feature-2.webp',
-        title: 'Protocol & Node Consulting',
+        image: "/images/feature-2.webp",
+        title: "Protocol & Node Consulting",
         description:
-            'Gain deep insight on protocol and market dynamics. Manage node infrastructure like the pros with 1:1 consultation.',
+            "Gain deep insight on protocol and market dynamics. Manage node infrastructure like the pros with 1:1 consultation.",
         id: 2,
     },
     {
-        image: '/images/feature-3.webp',
-        title: 'Bitcoin DeFi',
+        image: "/images/feature-3.webp",
+        title: "Bitcoin DeFi",
         description:
-            'Earn yield on your bitcoin with non-custodial delegation.',
+            "Earn yield on your bitcoin with non-custodial delegation.",
         id: 3,
     },
     {
-        image: '/images/feature-4.webp',
-        title: 'Staking-as-a-Service',
-        description: 'Delegate to our low commission high performant nodes.',
+        image: "/images/feature-4.webp",
+        title: "Staking-as-a-Service",
+        description: "Delegate to our low commission high performant nodes.",
         id: 4,
     },
 ]
@@ -121,7 +121,7 @@ export default function FeaturesSection() {
     const { scrollYProgress } = useScroll({
         target: targetRef,
     })
-    const x = useTransform(scrollYProgress, [0, 1], ['40%', '-50%'])
+    const x = useTransform(scrollYProgress, [0, 1], ["40%", "-50%"])
     const dot1ScaleProgress = useTransform(
         scrollYProgress,
         [0, 0.3, 0.6, 0.9],
@@ -146,22 +146,22 @@ export default function FeaturesSection() {
     const dot1BackgroundProgress = useTransform(
         scrollYProgress,
         [0, 0.3, 0.6, 0.9],
-        ['#28338B', '#58A1C6', '#58A1C6', '#58A1C6']
+        ["#28338B", "#58A1C6", "#58A1C6", "#58A1C6"]
     )
     const dot2BackgroundProgress = useTransform(
         scrollYProgress,
         [0, 0.3, 0.6, 0.9],
-        ['#58A1C6', '#28338B', '#58A1C6', '#58A1C6']
+        ["#58A1C6", "#28338B", "#58A1C6", "#58A1C6"]
     )
     const dot3BackgroundProgress = useTransform(
         scrollYProgress,
         [0, 0.3, 0.6, 0.9],
-        ['#58A1C6', '#58A1C6', '#28338B', '#58A1C6']
+        ["#58A1C6", "#58A1C6", "#28338B", "#58A1C6"]
     )
     const dot4BackgroundProgress = useTransform(
         scrollYProgress,
         [0, 0.3, 0.6, 0.9],
-        ['#58A1C6', '#58A1C6', '#58A1C6', '#28338B']
+        ["#58A1C6", "#58A1C6", "#58A1C6", "#28338B"]
     )
 
     return (

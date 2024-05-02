@@ -1,15 +1,15 @@
 ---
-import { Image } from 'astro:assets'
+import { Image } from "astro:assets"
 
 interface Props {
     href?: string
     variant?:
         | undefined
-        | 'primaryDark'
-        | 'secondaryDark'
-        | 'primaryLight'
-        | 'secondaryLight'
-        | 'icon'
+        | "primaryDark"
+        | "secondaryDark"
+        | "primaryLight"
+        | "secondaryLight"
+        | "icon"
     text?: string
     icon?: string
     target?: string
@@ -18,96 +18,96 @@ interface Props {
 let { href, target, text, variant, icon } = Astro.props
 
 let classList = [
-    'w-full md:w-auto inline-flex',
-    'justify-center',
-    'items-center',
-    'px-[36px]',
-    'py-[12px]',
-    'border-t-[2px]',
-    'border-r-[2px]',
-    'border-b-[6px]',
-    'border-l-[2px]',
-    'rounded-[8px]',
-    'transition-all',
-    'duration-300',
-    'ease-in-out',
-    'font-display',
-    'text-button',
-    'no-underline',
-    'lowercase',
+    "w-full md:w-auto inline-flex",
+    "justify-center",
+    "items-center",
+    "px-[36px]",
+    "py-[12px]",
+    "border-t-[2px]",
+    "border-r-[2px]",
+    "border-b-[6px]",
+    "border-l-[2px]",
+    "rounded-[8px]",
+    "transition-all",
+    "duration-300",
+    "ease-in-out",
+    "font-display",
+    "text-button",
+    "no-underline",
+    "lowercase",
 ]
 if (href === undefined) {
-    href = '#'
+    href = "#"
 }
 
 if (target === undefined) {
-    target = '_self'
+    target = "_self"
 }
 
 switch (variant) {
-    case 'primaryDark':
+    case "primaryDark":
     case undefined:
         classList.push(
-            'bg-axol-coral',
-            'text-shadow-blockchain',
-            'border-decentralized-coral',
-            'hover:border-b-[2px]',
-            'active:bg-decentralized-coral',
-            'active:text-crypto-frost',
-            'active:border-axol-coral'
+            "bg-axol-coral",
+            "text-shadow-blockchain",
+            "border-decentralized-coral",
+            "hover:border-b-[2px]",
+            "active:bg-decentralized-coral",
+            "active:text-crypto-frost",
+            "active:border-axol-coral"
         )
         break
-    case 'secondaryDark':
+    case "secondaryDark":
         classList.push(
-            'bg-transparent',
-            'text-crypto-frost',
-            'border-crypto-frost',
-            'hover:border-b-[2px]',
-            'active:bg-decentralized-coral',
-            'active:text-shadow-blockchain',
-            'active:border-axol-coral'
+            "bg-transparent",
+            "text-crypto-frost",
+            "border-crypto-frost",
+            "hover:border-b-[2px]",
+            "active:bg-decentralized-coral",
+            "active:text-shadow-blockchain",
+            "active:border-axol-coral"
         )
         break
-    case 'primaryLight':
+    case "primaryLight":
         classList.push(
-            'bg-node-indigo',
-            'text-crypto-frost',
-            'border-cryptowave-sky',
-            'hover:border-b-[2px]',
-            'active:bg-shadow-blockchain',
-            'active:text-crypto-frost',
-            'active:border-cryptowave-sky'
+            "bg-node-indigo",
+            "text-crypto-frost",
+            "border-cryptowave-sky",
+            "hover:border-b-[2px]",
+            "active:bg-shadow-blockchain",
+            "active:text-crypto-frost",
+            "active:border-cryptowave-sky"
         )
         break
-    case 'secondaryLight':
+    case "secondaryLight":
         classList.push(
-            'bg-transparent',
-            'text-node-indigo',
-            'border-node-indigo',
-            'hover:border-b-[2px]',
-            'active:bg-cryptowave-sky',
-            'active:text-crypto-frost',
-            'active:border-node-indigo'
+            "bg-transparent",
+            "text-node-indigo",
+            "border-node-indigo",
+            "hover:border-b-[2px]",
+            "active:bg-cryptowave-sky",
+            "active:text-crypto-frost",
+            "active:border-node-indigo"
         )
         break
-    case 'icon':
+    case "icon":
         classList = [
-            'flex',
-            'justify-center',
-            'items-center',
-            'px-[8px]',
-            'py-[8px]',
-            'border-t-[2px]',
-            'border-r-[2px]',
-            'border-b-[6px]',
-            'border-l-[2px]',
-            'rounded-full',
-            'transition-all',
-            'duration-300',
-            'ease-in-out',
-            'inline-flex',
-            'no-underline',
-            'hover:border-b-[2px]',
+            "flex",
+            "justify-center",
+            "items-center",
+            "px-[8px]",
+            "py-[8px]",
+            "border-t-[2px]",
+            "border-r-[2px]",
+            "border-b-[6px]",
+            "border-l-[2px]",
+            "rounded-full",
+            "transition-all",
+            "duration-300",
+            "ease-in-out",
+            "inline-flex",
+            "no-underline",
+            "hover:border-b-[2px]",
         ]
         break
 }

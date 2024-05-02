@@ -1,4 +1,4 @@
-import Lenis from 'lenis'
+import Lenis from "lenis"
 
 const lenis = new Lenis({
     duration: 1.2,
@@ -10,7 +10,7 @@ const lenis = new Lenis({
 })
 
 // Get scroll value.
-lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
+lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
     console.log({ scroll, limit, velocity, direction, progress })
 })
 
@@ -20,19 +20,19 @@ function raf(time) {
 }
 
 // Grab all elements that have a "data-target" attribute
-const scrollButtons = document.querySelectorAll('[data-target]')
+const scrollButtons = document.querySelectorAll("[data-target]")
 
 // For each element, listen to a "click" event
 scrollButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
+    button.addEventListener("click", (e) => {
         e.preventDefault()
 
         // get the DOM element by the ID (data-target value)
         var target = button.dataset.target,
-            $el = document.getElementById(target.replace('#', ''))
+            $el = document.getElementById(target.replace("#", ""))
 
         // Use lenis.scrollTo() to scroll the page to the right element
-        if (target === '#featuresSection') {
+        if (target === "#featuresSection") {
             lenis.scrollTo($el, {
                 offset: 110,
                 immediate: false,
