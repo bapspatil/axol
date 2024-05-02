@@ -1,0 +1,193 @@
+---
+import Layout from "../../layouts/Layout.astro"
+import { getEntry } from "astro:content"
+import { formatDate } from "../../utils/date"
+import { Image } from "astro:assets"
+import Button from "../../components/Button.astro"
+import Separator from "../../components/Separator.astro"
+
+const { slug } = Astro.params
+
+if (slug === undefined) {
+  throw new Error("Slug is required")
+}
+
+const entry = await getEntry("blog", slug)
+
+if (entry === undefined) {
+  return Astro.redirect("/404")
+}
+
+const title = entry.data.title
+const description = entry.data.description
+const heroImage = entry.data.heroImage
+const author = entry.data.author
+const pubDate = entry.data.pubDate
+const tags = entry.data.tags
+
+const { Content } = await entry.render()
+---
+
+<Layout
+  title={title}
+  description={description}
+  richLinkPreview={heroImage}>
+  <main
+    class="relative flex w-full flex-col gap-4 overflow-x-hidden bg-node-indigo pb-8 pt-32 text-shadow-blockchain antialiased md:px-16 md:px-4 md:pb-16 md:pt-44 lg:pt-48">
+    <div
+      class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-start rounded-lg md:px-4">
+      <Button
+        href="/blog"
+        text="Back"
+        variant="secondaryDark"
+        leadingIcon="/images/icon-back.svg"
+        >Back</Button
+      >
+    </div>
+    <Image
+      src="/images/hero-mesh.webp"
+      alt="A mesh background for Axol.io"
+      width={2560}
+      height={2560}
+      class="absolute inset-0 z-0 h-full w-full object-cover mix-blend-lighten"
+    />
+    <div
+      class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-between rounded-lg md:px-4">
+      <article
+        class="format format-sm sm:format-base lg:format-lg format-blue dark:format-invert mx-auto flex w-full max-w-2xl flex-col gap-4">
+        <header
+          id="homeSection"
+          class="not-format flex flex-col gap-4">
+          <Image
+            src={heroImage}
+            alt={title}
+            width={1200}
+            height={630}
+            class="aspect-[16/9] w-full object-cover md:rounded-lg"
+          />
+          <address class="flex items-center not-italic">
+            <div class="inline-flex flex-col md:flex-row items-start gap-4 px-4 md:px-0 text-body-sm">
+              <img
+                class="h-16 w-16 rounded-full"
+                src={author.image}
+                alt={author.name}
+              />
+              <div>
+                <p class="text-crypto-frost">
+                  {author.name}
+                </p>
+                <p class="text-crypto-frost/50">
+                  {author.title}
+                </p>
+                <p class="text-crypto-frost/50">
+                  <time
+                    datetime="2022-02-08"
+                    title={formatDate(pubDate)}>
+                    {formatDate(pubDate)}
+                  </time>
+                </p>
+              </div>
+            </div>
+          </address>
+        </header>
+        <div
+          class="flex h-auto w-full flex-col gap-8 rounded-2xl bg-crypto-frost p-4 md:p-16">
+          <h1>
+            {title}
+          </h1>
+          <p class="font-body text-body-md text-node-indigo">
+            {description}
+          </p>
+          <div class="h-[1px] w-full bg-node-indigo"></div>
+          <Content />
+        </div>
+        <div
+          class="flex w-full flex-row items-center justify-center gap-2 md:m-4">
+          {
+            tags.map((tag: string) => (
+              <a
+                href="#"
+                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-node-indigo">
+                {tag}
+              </a>
+            ))
+          }
+        </div>
+      </article>
+    </div>
+
+    <div
+      class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-end rounded-lg md:px-4">
+      <Button
+        href="/blog"
+        text="Back"
+        variant="secondaryDark"
+        leadingIcon="/images/icon-back.svg"
+        >Back</Button
+      >
+    </div>
+  </main>
+  <Separator
+    topVector="1"
+    topVectorColor="fill-node-indigo"
+    bottomVector="/images/separator-bottom-1.webp"
+    backgroundClasses="mix-blend-lighten opacity-50"
+    backgroundColor="bg-decentralized-coral"
+  />
+</Layout>
+<style is:global>
+  p,
+  li {
+    font-size: 1rem;
+    line-height: 170%;
+    font-weight: 500;
+    color: rgba(21, 0, 46, 1);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Panamera", sans-serif;
+    line-height: 120%;
+    font-weight: 700;
+    color: rgba(40, 51, 139, 1);
+    margin-bottom: -1rem;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    @media (max-width: 768px) {
+      font-size: 2.4rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.4rem;
+    @media (max-width: 768px) {
+      font-size: 1.8rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+    }
+  }
+
+  h5 {
+    font-size: 1.2rem;
+    @media (max-width: 768px) {
+      font-size: 1rem;
+    }
+  }
+</style>

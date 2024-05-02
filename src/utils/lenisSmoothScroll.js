@@ -32,7 +32,7 @@ scrollButtons.forEach((button) => {
       $el = document.getElementById(target.replace("#", ""))
 
     // Use lenis.scrollTo() to scroll the page to the right element
-    if (target === "#featuresSection") {
+    if (target === "#featuresSection" || target === "#featuresSectionTitle") {
       lenis.scrollTo($el, {
         offset: 110,
         immediate: false,

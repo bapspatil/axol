@@ -1,15 +1,17 @@
 ---
+import Footer from "../components/Footer.astro"
+import Navbar from "../components/Navbar"
+import "../styles/global.css"
+
 interface Props {
   title: string
+  description: string
+  richLinkPreview: string
 }
 
-const { title } = Astro.props
-const description =
-  "Empowering institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America."
-const richLinkPreview = "https://axol.io/metadata/rich-link-preview.jpg"
+const { title, description, richLinkPreview } = Astro.props
 const domainUrl = "https://axol.io"
 const twitterHandle = "@axol_io"
-import "../styles/global.css"
 ---
 
 <!doctype html>
@@ -119,15 +121,17 @@ import "../styles/global.css"
     <script
       src="https://challenges.cloudflare.com/turnstile/v0/api.js"
       async
-      defer>
-    </script>
+      defer
+    ></script>
     <meta
       name="generator"
       content={Astro.generator}
     />
   </head>
   <body>
+    <Navbar client:only="react" />
     <slot />
+    <Footer />
     <script src="/src/utils/lenisSmoothScroll.js"></script>
   </body>
 </html>

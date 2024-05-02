@@ -14,29 +14,29 @@ const announcement = {
 const navLinks = [
   {
     name: "Features",
-    href: "#featuresSection",
+    href: "/#featuresSectionTitle",
     target: "_self",
   },
   {
     name: "Use Cases",
-    href: "#useCasesSection",
+    href: "/#useCasesSection",
     target: "_self",
   },
   {
     name: "Team",
-    href: "#teamSection",
+    href: "/#teamSection",
     target: "_self",
   },
   {
     name: "Contact",
-    href: "#contactSection",
+    href: "/#contactSection",
     target: "_self",
   },
-  // {
-  //     name: "Blog",
-  //     href: "/blog",
-  //target: "_self",
-  // },
+  {
+    name: "Blog",
+    href: "/blog",
+    target: "_self",
+  },
   {
     name: "Faucet",
     href: "https://faucet.axol.io",
@@ -69,7 +69,7 @@ export default function Navbar() {
   const isInView = useInView(ref, { once: false })
 
   return (
-    <>
+    <div className="flex w-full flex-col items-center justify-start gap-12 md:w-auto">
       <a
         className={
           `fixed z-20 mt-0 hidden flex-row items-center justify-center gap-2 rounded-bl-full rounded-br-full border-transparent bg-axol-coral px-6 py-1 shadow-md transition-all duration-300 hover:border-node-indigo md:flex md:border-b-2 md:border-l-2 md:border-crypto-frost/75 ` +
@@ -206,6 +206,6 @@ export default function Navbar() {
           </a>
         </Ticker>
       </div>
-    </>
+    </div>
   )
 }

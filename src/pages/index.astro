@@ -1,21 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import Navbar from "../components/Navbar.tsx"
 import HeroSection from "../sections/HeroSection.astro"
 import FeaturesSection from "../sections/FeaturesSection.tsx"
 import AUMSection from "../sections/AUMSection.astro"
 import UseCasesSection from "../sections/UseCasesSection.astro"
 import TeamSection from "../sections/TeamSection.astro"
 import ContactSection from "../sections/ContactSection.astro"
-import Footer from "../components/Footer.astro"
 import Separator from "../components/Separator.astro"
+
+const title = "Axol.io • Stake sustainably with self-healing nodes"
+const description =
+  "Empowering institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America."
+const richLinkPreview = "https://axol.io/metadata/rich-link-preview.jpg"
 ---
 
-<Layout title="Axol.io • Stake sustainably with self-healing nodes">
+<Layout
+  title={title}
+  description={description}
+  richLinkPreview={richLinkPreview}>
   <main>
     <div
       class="relative flex w-full flex-col items-center justify-start overflow-x-clip">
-      <Navbar client:only="react" />
       <HeroSection />
       <Separator
         topVector="1"
@@ -64,7 +69,6 @@ import Separator from "../components/Separator.astro"
         backgroundClasses="mix-blend-difference opacity-[15%]"
         backgroundColor="bg-decentralized-coral"
       />
-      <Footer />
     </div>
   </main>
 </Layout>
