@@ -1,79 +1,74 @@
 ---
 const title = "Meet the Team!"
 const description =
-    "We’re an experienced team of builders with over 5 years of experience running institutional grade infrastructure for Fortune 100 companies.<br><br>Through sustainable staking, self healing nodes and exotic server locations we're leading the industry to build more diversified and green node infrastructure."
+  "We’re an experienced team of builders with over 5 years of experience running institutional grade infrastructure for Fortune 100 companies.<br><br>Through sustainable staking, self healing nodes and exotic server locations we're leading the industry to build more diversified and green node infrastructure."
 const team = [
-    {
-        name: "Drew",
-        title: "Node Ops & Protocol Director",
-        image: "/images/team-drew.webp",
-    },
-    {
-        name: "Clay",
-        title: "Business Operations & Marketing",
-        image: "/images/team-clay.webp",
-    },
-    {
-        name: "Anon Axolotl",
-        title: "Node Ops Director",
-        image: "/images/team-anon.webp",
-    },
+  {
+    name: "Drew",
+    title: "Node Ops & Protocol Director",
+    image: "/images/team-drew.webp",
+  },
+  {
+    name: "Clay",
+    title: "Business Operations & Marketing",
+    image: "/images/team-clay.webp",
+  },
+  {
+    name: "Anon Axolotl",
+    title: "Node Ops Director",
+    image: "/images/team-anon.webp",
+  },
 ]
 ---
 
 <section
-    id="teamSection"
-    class="relative box-border flex w-full flex-col items-center justify-start gap-8 overflow-hidden bg-decentralized-coral px-4 py-8 text-shadow-blockchain md:p-16"
->
-    <img
-        class="absolute bottom-0 z-0 w-full shrink-0 overflow-hidden object-cover mix-blend-screen"
-        alt="Mesh background for team section"
-        src="/images/team-mesh.webp"
-    />
-    <h2
-        class="relative z-10 inline-block font-title text-mobile-h2 text-shadow-blockchain md:text-h2"
-    >
-        {title}
-    </h2>
-    <img
-        class="relative z-10 h-auto w-192 object-cover"
-        loading="lazy"
-        alt="Team image for team section"
-        src="/images/team-image.webp"
-    />
+  id="teamSection"
+  class="relative box-border flex w-full flex-col items-center justify-start gap-8 overflow-hidden bg-decentralized-coral px-4 py-8 text-shadow-blockchain md:p-16">
+  <img
+    class="absolute bottom-0 z-0 w-full shrink-0 overflow-hidden object-cover mix-blend-screen"
+    alt="Mesh background for team section"
+    src="/images/team-mesh.webp"
+  />
+  <h2
+    class="relative z-10 inline-block font-title text-mobile-h2 text-shadow-blockchain md:text-h2">
+    {title}
+  </h2>
+  <img
+    class="relative z-10 h-auto w-192 object-cover"
+    loading="lazy"
+    alt="Team image for team section"
+    src="/images/team-image.webp"
+  />
+  <div
+    class="z-10 flex flex-col items-start justify-center gap-4 md:flex-row lg:gap-16">
     <div
-        class="z-10 flex flex-col items-start justify-center gap-4 md:flex-row lg:gap-16"
-    >
-        <div
-            class="flex w-full flex-col items-center justify-center rounded border-b-6 border-solid border-cryptowave-sky bg-axol-coral p-4 md:w-128 md:p-12"
-        >
-            <p class="font-body text-body-sm md:text-body-md">
-                <Fragment set:html={description} />
-            </p>
-        </div>
-        <div
-            class="flex flex-row flex-wrap items-start justify-center gap-4 md:flex-col"
-        >
-            {
-                team.map((member) => (
-                    <div class="group flex w-full flex-col content-start justify-start gap-2 sm:w-auto md:w-full md:flex-row md:items-center">
-                        <img
-                            class="relative h-24 w-24 object-cover transition-all duration-300 group-hover:scale-110"
-                            loading="lazy"
-                            alt={member.name}
-                            src={member.image}
-                        />
-                        <div class="box-border flex w-full min-w-52 flex-col items-start justify-start gap-0 rounded-full border-b-6 border-solid border-cryptowave-sky bg-axol-coral px-6 py-4 transition-all duration-300 group-hover:bg-cryptowave-sky sm:w-auto md:w-full md:px-8 md:py-6">
-                            <h2 class="font-title text-h5 transition-all duration-300 group-hover:text-crypto-frost">
-                                {member.name}
-                            </h2>
-                            <div class="font-body text-body-sm transition-all duration-300 group-hover:text-crypto-frost">
-                                {member.title}
-                            </div>
-                        </div>
-                    </div>
-                ))
-            }
-        </div>
+      class="flex w-full flex-col items-center justify-center rounded border-b-6 border-solid border-cryptowave-sky bg-axol-coral p-4 md:w-128 md:p-12">
+      <p class="font-body text-body-sm md:text-body-md">
+        <Fragment set:html={description} />
+      </p>
     </div>
+    <div
+      class="flex flex-row flex-wrap items-start justify-center gap-4 md:flex-col">
+      {
+        team.map((member) => (
+          <div class="group flex w-full flex-col content-start justify-start gap-2 sm:w-auto md:w-full md:flex-row md:items-center">
+            <img
+              class="relative h-24 w-24 object-cover transition-all duration-300 group-hover:scale-110"
+              loading="lazy"
+              alt={member.name}
+              src={member.image}
+            />
+            <div class="box-border flex w-full min-w-52 flex-col items-start justify-start gap-0 rounded-full border-b-6 border-solid border-cryptowave-sky bg-axol-coral px-6 py-4 transition-all duration-300 group-hover:bg-cryptowave-sky sm:w-auto md:w-full md:px-8 md:py-6">
+              <h2 class="font-title text-h5 transition-all duration-300 group-hover:text-crypto-frost">
+                {member.name}
+              </h2>
+              <div class="font-body text-body-sm transition-all duration-300 group-hover:text-crypto-frost">
+                {member.title}
+              </div>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
 </section>

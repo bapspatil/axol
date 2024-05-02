@@ -4,26 +4,30 @@ import Counter from "../components/Counter.tsx"
 ---
 
 <section
-    id="aumSection"
-    class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-crypto-frost px-4 py-8 text-center text-node-indigo md:p-8"
->
-    <Image
-        class="absolute bottom-0 left-0 right-0 !m-[0] h-auto w-screen shrink-0 overflow-hidden mix-blend-difference"
-        alt="AUM Background"
-        width={2650}
-        height={1720}
-        src="/images/aum-mesh.webp"
-    />
+  id="aumSection"
+  class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-crypto-frost px-4 py-8 text-center text-node-indigo md:p-8">
+  <Image
+    class="absolute bottom-0 left-0 right-0 !m-[0] h-auto w-screen shrink-0 overflow-hidden mix-blend-difference"
+    alt="AUM Background"
+    width={2650}
+    height={1720}
+    src="/images/aum-mesh.webp"
+  />
 
-    <div
-        class="mx-0 flex h-auto flex-col items-center justify-center gap-0 px-0 md:h-screen"
-    >
-        <p
-            class="hidden font-title text-[128px] font-bold md:block lg:text-[160px]"
-        >
-            ${(<Counter value={22000000} client:only="react" />)}
-        </p>
-        <p class="block font-title text-h2 font-bold md:hidden">$22M+</p>
-        <p class="font-title text-h3">AUM</p>
-    </div>
+  <div
+    class="mx-0 flex h-auto flex-col items-center justify-center gap-0 px-0 md:h-screen">
+    <p
+      class="hidden font-title text-[128px] font-bold md:block lg:text-[160px]">
+      ${
+        (
+          <Counter
+            value={22000000}
+            client:only="react"
+          />
+        )
+      }
+    </p>
+    <p class="block font-title text-h2 font-bold md:hidden">$22M+</p>
+    <p class="font-title text-h3">AUM</p>
+  </div>
 </section>

@@ -1,78 +1,73 @@
 ---
 const useCases = [
-    {
-        title: "VCs",
-        description:
-            "Strategically maximize potential upside with our discreet airdrop farming packages designed specifically for incentivized testnets.",
-        image: "/images/use-case-icon-1.svg",
-        span: "md:col-span-3",
-        imageSize: "w-16 h-16 md:w-24 md:h-24",
-    },
-    {
-        title: "Retail",
-        description:
-            "Perform non-custodial staking through token delegation to our validators.",
-        image: "/images/use-case-icon-2.svg",
-        span: "md:col-span-2",
-        imageSize: "w-16 h-16",
-    },
-    {
-        title: "Bitcoin Miners",
-        description:
-            "Seamlessly earn yield on staked Bitcoin through our innovative solutions.",
-        image: "/images/use-case-icon-3.svg",
-        span: "md:col-span-2",
-        imageSize: "w-16 h-16",
-    },
-    {
-        title: "Protocol Foundations",
-        description:
-            "Diversify & strengthen your validator set by leveraging our carbon-neutral infra in LATAM.",
-        image: "/images/use-case-icon-4.svg",
-        span: "md:col-span-3",
-        imageSize: "w-16 h-16 md:w-24 md:h-24",
-    },
+  {
+    title: "VCs",
+    description:
+      "Strategically maximize potential upside with our discreet airdrop farming packages designed specifically for incentivized testnets.",
+    image: "/images/use-case-icon-1.svg",
+    span: "md:col-span-3",
+    imageSize: "w-16 h-16 md:w-24 md:h-24",
+  },
+  {
+    title: "Retail",
+    description:
+      "Perform non-custodial staking through token delegation to our validators.",
+    image: "/images/use-case-icon-2.svg",
+    span: "md:col-span-2",
+    imageSize: "w-16 h-16",
+  },
+  {
+    title: "Bitcoin Miners",
+    description:
+      "Seamlessly earn yield on staked Bitcoin through our innovative solutions.",
+    image: "/images/use-case-icon-3.svg",
+    span: "md:col-span-2",
+    imageSize: "w-16 h-16",
+  },
+  {
+    title: "Protocol Foundations",
+    description:
+      "Diversify & strengthen your validator set by leveraging our carbon-neutral infra in LATAM.",
+    image: "/images/use-case-icon-4.svg",
+    span: "md:col-span-3",
+    imageSize: "w-16 h-16 md:w-24 md:h-24",
+  },
 ]
 ---
 
 <section
-    id="useCasesSection"
-    class="relative flex h-auto w-full max-w-full flex-col items-center justify-center gap-6 overflow-hidden bg-node-indigo px-4 py-8 text-center text-crypto-frost md:h-screen md:px-16 md:py-16"
->
-    <img
-        class="absolute bottom-0 z-0 w-full shrink-0 overflow-hidden object-cover mix-blend-screen"
-        alt="Mesh background for use cases section"
-        src="/images/usecases-mesh.webp"
-    />
+  id="useCasesSection"
+  class="relative flex h-auto w-full max-w-full flex-col items-center justify-center gap-6 overflow-hidden bg-node-indigo px-4 py-8 text-center text-crypto-frost md:h-screen md:px-16 md:py-16">
+  <img
+    class="absolute bottom-0 z-0 w-full shrink-0 overflow-hidden object-cover mix-blend-screen"
+    alt="Mesh background for use cases section"
+    src="/images/usecases-mesh.webp"
+  />
 
-    <h2 class="relative z-10 font-title text-mobile-h2 md:text-h2">
-        Use Cases
-    </h2>
-    <div
-        class="z-10 grid max-w-192 grid-cols-1 gap-6 md:auto-rows-auto md:grid-cols-5"
-    >
-        {
-            useCases.map((useCase) => (
-                <div
-                    class={`row-span-1 ${useCase.span} shadow-input group flex flex-col justify-between rounded border-b-8 border-cryptowave-sky bg-shadow-blockchain p-8 transition-all duration-300 hover:scale-105 hover:bg-cryptowave-sky`}
-                >
-                    <div class="flex flex-row items-start justify-between gap-4 md:gap-8">
-                        <div class="inline-flex flex-col items-start justify-start gap-2">
-                            <h3 class="text-left font-title text-mobile-h3 text-crypto-frost md:text-h5">
-                                {useCase.title}
-                            </h3>
-                            <p class="text-left font-body text-body-sm text-cryptowave-sky transition-all duration-300 group-hover:text-crypto-frost">
-                                {useCase.description}
-                            </p>
-                        </div>
-                        <img
-                            class={`${useCase.imageSize} transition-all duration-300  group-hover:scale-110 group-hover:mix-blend-plus-lighter`}
-                            src={useCase.image}
-                            alt={useCase.title}
-                        />
-                    </div>
-                </div>
-            ))
-        }
-    </div>
+  <h2 class="relative z-10 font-title text-mobile-h2 md:text-h2">Use Cases</h2>
+  <div
+    class="z-10 grid max-w-192 grid-cols-1 gap-6 md:auto-rows-auto md:grid-cols-5">
+    {
+      useCases.map((useCase) => (
+        <div
+          class={`row-span-1 ${useCase.span} shadow-input group flex flex-col justify-between rounded border-b-8 border-cryptowave-sky bg-shadow-blockchain p-8 transition-all duration-300 hover:scale-105 hover:bg-cryptowave-sky`}>
+          <div class="flex flex-row items-start justify-between gap-4 md:gap-8">
+            <div class="inline-flex flex-col items-start justify-start gap-2">
+              <h3 class="text-left font-title text-mobile-h3 text-crypto-frost md:text-h5">
+                {useCase.title}
+              </h3>
+              <p class="text-left font-body text-body-sm text-cryptowave-sky transition-all duration-300 group-hover:text-crypto-frost">
+                {useCase.description}
+              </p>
+            </div>
+            <img
+              class={`${useCase.imageSize} transition-all duration-300  group-hover:scale-110 group-hover:mix-blend-plus-lighter`}
+              src={useCase.image}
+              alt={useCase.title}
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
 </section>

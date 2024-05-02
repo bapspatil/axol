@@ -12,60 +12,59 @@ import Separator from "../components/Separator.astro"
 ---
 
 <Layout title="Axol.io • Stake sustainably with self-healing nodes">
-    <main>
-        <div
-            class="relative flex w-full flex-col items-center justify-start overflow-x-clip"
-        >
-            <Navbar client:only="react" />
-            <HeroSection />
-            <Separator
-                topVector="1"
-                topVectorColor="fill-decentralized-coral"
-                bottomVector="/images/separator-bottom-1.webp"
-                backgroundClasses="mix-blend-exclusion opacity-50"
-                backgroundColor="bg-cryptowave-sky"
-            />
-            <FeaturesSection client:only="react" />
-            <Separator
-                topVector="2"
-                topVectorColor="fill-cryptowave-sky"
-                bottomVector="/images/separator-bottom-2.webp"
-                backgroundClasses="mix-blend-screen opacity-50"
-                backgroundColor="bg-crypto-frost"
-            />
-            <AUMSection />
-            <Separator
-                topVector="1"
-                topVectorColor="fill-crypto-frost"
-                bottomVector="/images/separator-bottom-1.webp"
-                backgroundClasses="mix-blend-difference opacity-[15%]"
-                backgroundColor="bg-node-indigo"
-            />
-            <UseCasesSection />
-            <Separator
-                topVector="2"
-                topVectorColor="fill-node-indigo"
-                bottomVector="/images/separator-bottom-2.webp"
-                backgroundClasses="mix-blend-screen opacity-50"
-                backgroundColor="bg-decentralized-coral"
-            />
-            <TeamSection />
-            <Separator
-                topVector="1"
-                topVectorColor="fill-decentralized-coral"
-                bottomVector="/images/separator-bottom-1.webp"
-                backgroundClasses="mix-blend-screen opacity-50"
-                backgroundColor="bg-axol-coral"
-            />
-            <ContactSection />
-            <Separator
-                topVector="2"
-                topVectorColor="fill-axol-coral"
-                bottomVector="/images/separator-bottom-2.webp"
-                backgroundClasses="mix-blend-difference opacity-[15%]"
-                backgroundColor="bg-decentralized-coral"
-            />
-            <Footer />
-        </div>
-    </main>
+  <main>
+    <div
+      class="relative flex w-full flex-col items-center justify-start overflow-x-clip">
+      <Navbar client:only="react" />
+      <HeroSection />
+      <Separator
+        topVector="1"
+        topVectorColor="fill-decentralized-coral"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-exclusion opacity-50"
+        backgroundColor="bg-cryptowave-sky"
+      />
+      <FeaturesSection client:only="react" />
+      <Separator
+        topVector="2"
+        topVectorColor="fill-cryptowave-sky"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
+        backgroundColor="bg-crypto-frost"
+      />
+      <AUMSection />
+      <Separator
+        topVector="1"
+        topVectorColor="fill-crypto-frost"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-difference opacity-[15%]"
+        backgroundColor="bg-node-indigo"
+      />
+      <UseCasesSection />
+      <Separator
+        topVector="2"
+        topVectorColor="fill-node-indigo"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
+        backgroundColor="bg-decentralized-coral"
+      />
+      <TeamSection />
+      <Separator
+        topVector="1"
+        topVectorColor="fill-decentralized-coral"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-screen opacity-50"
+        backgroundColor="bg-axol-coral"
+      />
+      <ContactSection />
+      <Separator
+        topVector="2"
+        topVectorColor="fill-axol-coral"
+        bottomVector="/images/separator-bottom-2.webp"
+        backgroundClasses="mix-blend-difference opacity-[15%]"
+        backgroundColor="bg-decentralized-coral"
+      />
+      <Footer />
+    </div>
+  </main>
 </Layout>
