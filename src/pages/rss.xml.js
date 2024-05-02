@@ -8,8 +8,10 @@ export async function GET(context) {
     description: "Stake sustainably with self-healing nodes",
     site: context.site,
     items: blogs.map((post) => ({
-      ...post.data,
-      link: `/blog/${post.slug}/`,
+      title: post.data.title,
+      pubDate: post.data.pubDate,
+      description: post.data.description,
+      link: `https://axol.io/blog/${post.slug}`,
     })),
   })
 }

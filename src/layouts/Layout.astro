@@ -127,6 +127,12 @@ const twitterHandle = "@axol_io"
       name="generator"
       content={Astro.generator}
     />
+    <link
+    rel="alternate"
+    type="application/rss+xml"
+    title="Axol.io Blog"
+    href={`${Astro.site}rss.xml`}
+    />
   </head>
   <body>
     <Navbar client:only="react" />
