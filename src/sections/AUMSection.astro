@@ -1,29 +1,29 @@
 ---
-import { Image } from "astro:assets";
-import Counter from "../components/Counter.tsx";
+import { Image } from 'astro:assets'
+import Counter from '../components/Counter.tsx'
 ---
 
 <section
-  id="aumSection"
-  class="relative w-screen h-screen bg-crypto-frost overflow-hidden flex flex-col items-center justify-center text-center text-node-indigo px-4 py-8 md:p-8"
+    id="aumSection"
+    class="relative flex h-screen w-screen flex-col items-center justify-center overflow-hidden bg-crypto-frost px-4 py-8 text-center text-node-indigo md:p-8"
 >
-  <Image
-    class="w-screen h-auto absolute !m-[0] right-0 bottom-0 left-0 overflow-hidden shrink-0 mix-blend-difference"
-    alt="AUM Background"
-    width={2650}
-    height={1720}
-    src="/images/aum-mesh.webp"
-  />
+    <Image
+        class="absolute bottom-0 left-0 right-0 !m-[0] h-auto w-screen shrink-0 overflow-hidden mix-blend-difference"
+        alt="AUM Background"
+        width={2650}
+        height={1720}
+        src="/images/aum-mesh.webp"
+    />
 
-  <div
-    class="h-auto md:h-screen flex flex-col justify-center items-center gap-0 mx-0 px-0"
-  >
-    <p
-      class="font-title text-[128px] font-bold hidden md:block lg:text-[160px]"
+    <div
+        class="mx-0 flex h-auto flex-col items-center justify-center gap-0 px-0 md:h-screen"
     >
-      ${(<Counter value={22000000} client:only="react" />)}
-    </p>
-    <p class="font-title text-h2 font-bold block md:hidden">$22M+</p>
-    <p class="font-title text-h3">AUM</p>
-  </div>
+        <p
+            class="hidden font-title text-[128px] font-bold md:block lg:text-[160px]"
+        >
+            ${(<Counter value={22000000} client:only="react" />)}
+        </p>
+        <p class="block font-title text-h2 font-bold md:hidden">$22M+</p>
+        <p class="font-title text-h3">AUM</p>
+    </div>
 </section>

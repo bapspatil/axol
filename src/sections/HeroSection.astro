@@ -1,100 +1,105 @@
 ---
-import { Image } from "astro:assets";
-import Button from "../components/Button.astro";
+import { Image } from 'astro:assets'
+import Button from '../components/Button.astro'
 ---
 
 <section
-  id="homeSection"
-  class="w-full h-auto relative bg-decentralized-coral overflow-hidden flex flex-col items-center justify-start gap-8 text-center text-crypto-frost px-4 pt-32 pb-8 md:pt-44 md:pb-16 md:px-16"
+    id="homeSection"
+    class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-decentralized-coral px-4 pb-8 pt-32 text-center text-crypto-frost md:px-16 md:pb-16 md:pt-44"
 >
-  <Image
-    src="/images/hero-mesh.webp"
-    alt="A mesh background for Axol.io"
-    width={2560}
-    height={2560}
-    class="w-full h-full absolute inset-0 object-cover mix-blend-exclusion"
-  />
-
-  <div
-    class="w-full max-w-[790px] sm:w-[90%] flex flex-col items-center justify-center relative gap-4 sm:gap-6 z-10"
-  >
-    <h1 class="w-full font-title text-mobile-h1 md:text-h1">
-      Stake sustainably
-      <span class="block"
-        >with
-        <span class="relative sm:whitespace-nowrap">
-          <span
-            class="hidden sm:block sm:absolute h-[12px] rounded-full bg-axol-coral/50 inset-x-0 bottom-2"
-          ></span>
-          <span
-            class="relative underline decoration-axol-coral/50 decoration-8 sm:no-underline"
-            >self-healing nodes</span
-          >
-        </span></span
-      >
-    </h1>
-
-    <p class="relative inline-block text-body-md">
-      Empowering institutional staking infrastructure with unrivaled uptime,
-      harnessing self-healing nodes and renewable energy across Latin America.
-    </p>
-    <div
-      class="w-full flex flex-col sm:flex-row items-center justify-center gap-4"
-    >
-      <Button
-        variant="primaryLight"
-        text="Book a Call"
-        href="https://calendly.com/clay-axol/30min?utm_source=axolsite&utm_medium=website&utm_campaign=homepage&utm_content=hero+section+button"
-        target="_blank"
-      />
-      <Button
-        variant="secondaryDark"
-        text="Learn More"
-        href="#featuresSection"
-      />
-    </div>
     <Image
-      class="w-auto sm:h-[420px] md:h-[450px] lg:h-[500px] relative object-cover -mt-4 sm:-mt-8 -z-10"
-      alt="An axolotl running a node on the Axol.io Network"
-      width={1658}
-      height={1182}
-      src="/images/hero-image.webp"
+        src="/images/hero-mesh.webp"
+        alt="A mesh background for Axol.io"
+        width={2560}
+        height={2560}
+        class="absolute inset-0 h-full w-full object-cover mix-blend-exclusion"
     />
-  </div>
 
-  <div class="flex flex-col items-center justify-start gap-12 z-10">
-    <h2 class="font-title text-mobile-h2 md:text-h3">Running node infra on:</h2>
     <div
-      class="flex flex-row flex-wrap items-center justify-center py-0 px-4 md:px-16 gap-8 sm:gap-12 md:gap-16"
+        class="relative z-10 flex w-full max-w-[790px] flex-col items-center justify-center gap-4 sm:w-[90%] sm:gap-6"
     >
-      <Image
-        class="h-[52px] w-auto relative object-cover"
-        alt="Eigen Layer"
-        src="/images/company-eigenlayer.svg"
-        width={260}
-        height={104}
-      />
-      <Image
-        class="h-[26px] md:h-[32px] w-auto relative object-cover"
-        alt="Gnosis Chain"
-        src="/images/company-gnosischain.svg"
-        width={600}
-        height={64}
-      />
-      <Image
-        class="h-[46px] w-auto relative object-cover"
-        alt="Lido"
-        src="/images/company-lido.svg"
-        width={350}
-        height={92}
-      />
-      <Image
-        class="h-[52px] w-auto relative object-cover"
-        alt="Osmosis"
-        src="/images/company-osmosis.svg"
-        width={420}
-        height={104}
-      />
+        <h1 class="w-full font-title text-mobile-h1 md:text-h1">
+            Stake sustainably
+            <span class="block">
+                with
+                <span class="relative sm:whitespace-nowrap">
+                    <span
+                        class="inset-x-0 bottom-2 hidden h-[12px] rounded-full bg-axol-coral/50 sm:absolute sm:block"
+                    >
+                    </span>
+                    <span
+                        class="relative underline decoration-axol-coral/50 decoration-8 sm:no-underline"
+                    >
+                        self-healing nodes
+                    </span>
+                </span>
+            </span>
+        </h1>
+
+        <p class="relative inline-block text-body-md">
+            Empowering institutional staking infrastructure with unrivaled
+            uptime, harnessing self-healing nodes and renewable energy across
+            Latin America.
+        </p>
+        <div
+            class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row"
+        >
+            <Button
+                variant="primaryLight"
+                text="Book a Call"
+                href="https://calendly.com/clay-axol/30min?utm_source=axolsite&utm_medium=website&utm_campaign=homepage&utm_content=hero+section+button"
+                target="_blank"
+            />
+            <Button
+                variant="secondaryDark"
+                text="Learn More"
+                href="#featuresSection"
+            />
+        </div>
+        <Image
+            class="relative -z-10 -mt-4 w-auto object-cover sm:-mt-8 sm:h-[420px] md:h-[450px] lg:h-[500px]"
+            alt="An axolotl running a node on the Axol.io Network"
+            width={1658}
+            height={1182}
+            src="/images/hero-image.webp"
+        />
     </div>
-  </div>
+
+    <div class="z-10 flex flex-col items-center justify-start gap-12">
+        <h2 class="font-title text-mobile-h2 md:text-h3">
+            Running node infra on:
+        </h2>
+        <div
+            class="flex flex-row flex-wrap items-center justify-center gap-8 px-4 py-0 sm:gap-12 md:gap-16 md:px-16"
+        >
+            <Image
+                class="relative h-[52px] w-auto object-cover"
+                alt="Eigen Layer"
+                src="/images/company-eigenlayer.svg"
+                width={260}
+                height={104}
+            />
+            <Image
+                class="relative h-[26px] w-auto object-cover md:h-[32px]"
+                alt="Gnosis Chain"
+                src="/images/company-gnosischain.svg"
+                width={600}
+                height={64}
+            />
+            <Image
+                class="relative h-[46px] w-auto object-cover"
+                alt="Lido"
+                src="/images/company-lido.svg"
+                width={350}
+                height={92}
+            />
+            <Image
+                class="relative h-[52px] w-auto object-cover"
+                alt="Osmosis"
+                src="/images/company-osmosis.svg"
+                width={420}
+                height={104}
+            />
+        </div>
+    </div>
 </section>

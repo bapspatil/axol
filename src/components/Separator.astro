@@ -1,68 +1,68 @@
 ---
 interface Props {
-  topVector: "1" | "2";
-  topVectorColor: string;
-  bottomVector:
-    | "/images/separator-bottom-1.webp"
-    | "/images/separator-bottom-2.webp";
-  backgroundClasses: string;
-  backgroundColor: string;
+    topVector: '1' | '2'
+    topVectorColor: string
+    bottomVector:
+        | '/images/separator-bottom-1.webp'
+        | '/images/separator-bottom-2.webp'
+    backgroundClasses: string
+    backgroundColor: string
 }
 const {
-  topVector,
-  topVectorColor,
-  bottomVector,
-  backgroundClasses,
-  backgroundColor,
-} = Astro.props;
-Astro.props;
+    topVector,
+    topVectorColor,
+    bottomVector,
+    backgroundClasses,
+    backgroundColor,
+} = Astro.props
+Astro.props
 ---
 
 <section
-  class:list={[
-    "w-full h-16 md:h-16 lg:h-32 relative overflow-hidden",
-    backgroundColor,
-  ]}
->
-  <div class="absolute top-0 left-0 w-full overflow-hidden line-height-0">
-    {
-      topVector === "1" && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class:list={[topVectorColor, "w-full h-full relative"]}
-          viewBox="0 0 2560 200"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M2334.04 59.5628C2682.72 37.9958 2832.63 103.828 2864 139.44V-226H-346C-310.147 -130.812 -140.291 59.5628 252.303 59.5628C743.047 59.5628 842.764 112.482 1333.51 162.405C1824.25 212.329 1898.2 86.5215 2334.04 59.5628Z"
-            class={topVectorColor}
-          />
-        </svg>
-      )
-    }
-    {
-      topVector === "2" && (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          class:list={[topVectorColor, "w-full h-full relative"]}
-          viewBox="0 0 2560 200"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M473 60.0001C161.8 38.4001 28 104.333 0 140V-226H2865C2833 -130.667 2681.4 60.0001 2331 60.0001C1893 60.0001 1804 113 1366 163C928 213 862 87.0001 473 60.0001Z"
-            class={topVectorColor}
-          />
-        </svg>
-      )
-    }
-  </div>
-
-  <img
     class:list={[
-      "absolute inset-0 w-full h-full object-cover z-10",
-      backgroundClasses,
+        'relative h-16 w-full overflow-hidden md:h-16 lg:h-32',
+        backgroundColor,
     ]}
-    alt="Bottom Vector Background"
-    src={bottomVector}
-  />
+>
+    <div class="line-height-0 absolute left-0 top-0 w-full overflow-hidden">
+        {
+            topVector === '1' && (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class:list={[topVectorColor, 'relative h-full w-full']}
+                    viewBox="0 0 2560 200"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M2334.04 59.5628C2682.72 37.9958 2832.63 103.828 2864 139.44V-226H-346C-310.147 -130.812 -140.291 59.5628 252.303 59.5628C743.047 59.5628 842.764 112.482 1333.51 162.405C1824.25 212.329 1898.2 86.5215 2334.04 59.5628Z"
+                        class={topVectorColor}
+                    />
+                </svg>
+            )
+        }
+        {
+            topVector === '2' && (
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class:list={[topVectorColor, 'relative h-full w-full']}
+                    viewBox="0 0 2560 200"
+                    preserveAspectRatio="none"
+                >
+                    <path
+                        d="M473 60.0001C161.8 38.4001 28 104.333 0 140V-226H2865C2833 -130.667 2681.4 60.0001 2331 60.0001C1893 60.0001 1804 113 1366 163C928 213 862 87.0001 473 60.0001Z"
+                        class={topVectorColor}
+                    />
+                </svg>
+            )
+        }
+    </div>
+
+    <img
+        class:list={[
+            'absolute inset-0 z-10 h-full w-full object-cover',
+            backgroundClasses,
+        ]}
+        alt="Bottom Vector Background"
+        src={bottomVector}
+    />
 </section>

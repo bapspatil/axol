@@ -1,69 +1,74 @@
 ---
 interface Props {
-  title: string;
+    title: string
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 const description =
-  "Empowering institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America.";
-const richLinkPreview = "https://axol.io/metadata/rich-link-preview.jpg";
-const domainUrl = "https://axol.io";
-const twitterHandle = "@axol_io";
-import "../styles/global.css";
+    'Empowering institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America.'
+const richLinkPreview = 'https://axol.io/metadata/rich-link-preview.jpg'
+const domainUrl = 'https://axol.io'
+const twitterHandle = '@axol_io'
+import '../styles/global.css'
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <title>{title}</title>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={domainUrl} />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content={richLinkPreview} />
+    <head>
+        <title>{title}</title>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={domainUrl} />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content={richLinkPreview} />
 
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={domainUrl} />
-    <meta name="twitter:site" content={twitterHandle} />
-    <meta name="twitter:creator" content={twitterHandle} />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content={richLinkPreview} />
-    <meta name="twitter:image:alt" content={description} />
-    <meta name="twitter:label1" content="Book a Call" />
-    <meta name="twitter:data1" content="https://calendly.com/clay-axol/30min" />
-    <!-- TODO: remove for production -->
-    <meta name="robots" content="noindex" />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="/metadata/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="/metadata/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/metadata/favicon-16x16.png"
-    />
-    <link rel="manifest" href="/metadata/site.webmanifest" />
-    <script
-      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
-      async
-      defer></script>
-    <meta name="generator" content={Astro.generator} />
-  </head>
-  <body>
-    <slot />
-    <script src="/src/utils/lenisSmoothScroll.js"></script>
-  </body>
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={domainUrl} />
+        <meta name="twitter:site" content={twitterHandle} />
+        <meta name="twitter:creator" content={twitterHandle} />
+        <meta property="twitter:title" content={title} />
+        <meta property="twitter:description" content={description} />
+        <meta property="twitter:image" content={richLinkPreview} />
+        <meta name="twitter:image:alt" content={description} />
+        <meta name="twitter:label1" content="Book a Call" />
+        <meta
+            name="twitter:data1"
+            content="https://calendly.com/clay-axol/30min"
+        />
+        <!-- TODO: remove for production -->
+        <meta name="robots" content="noindex" />
+        <link rel="sitemap" href="/sitemap-index.xml" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="/metadata/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="/metadata/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="/metadata/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/metadata/site.webmanifest" />
+        <script
+            src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+            async
+            defer
+        >
+        </script>
+        <meta name="generator" content={Astro.generator} />
+    </head>
+    <body>
+        <slot />
+        <script src="/src/utils/lenisSmoothScroll.js"></script>
+    </body>
 </html>

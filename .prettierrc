@@ -3,7 +3,10 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "plugins": ["prettier-plugin-tailwindcss", "prettier-plugin-astro"],
+    "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
+    "tailwindConfig": "./tailwind.config.mjs",
+    "tailwindAttributes": ["classList", "classList.push"],
+    "htmlWhitespaceSensitivity": "ignore",
     "overrides": [
         {
             "files": "*.astro",
