@@ -23,7 +23,7 @@ const posts = (await getCollection("blog")).sort(
   richLinkPreview={richLinkPreview}>
   <main>
     <div
-      class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 lg:px-12 xl:px-16 md:pb-16 md:pt-44 lg:pt-48">
+      class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
       <Image
         src="/images/hero-mesh.webp"
         alt="A mesh background for Axol.io"
@@ -43,26 +43,86 @@ const posts = (await getCollection("blog")).sort(
           {
             posts.map((post, index) =>
               index === 0 ? (
-                
-                  <article class="flex max-w-4xl flex-col items-start justify-start gap-2 sm:flex-row md:justify-between md:gap-8">
-                    <a
-                  id="homeSection"
-                  href={"/blog/" + post.slug}>
+                <article class="flex max-w-4xl flex-col items-start justify-start gap-2 sm:flex-row md:justify-between md:gap-8">
+                  <a
+                    id="homeSection"
+                    href={"/blog/" + post.slug}>
                     <img
                       src={post.data.heroImage}
                       alt={post.data.title}
                       class="aspect-[16/9] w-full rounded-lg object-cover"
                     />
+                  </a>
+                  <div class="flex max-w-xl flex-col items-start justify-start gap-2 md:gap-4">
+                    <div class="flex flex-col flex-wrap items-start justify-start gap-2 sm:flex-row sm:items-center">
+                      <time
+                        datetime="1914-12-20"
+                        class="text-body-sm lowercase text-crypto-frost/50"
+                        title={formatDate(post.data.pubDate)}>
+                        {formatDate(post.data.pubDate)}
+                      </time>
+                      <div class="flex flex-row items-start justify-start gap-2">
+                        {post.data.tags.map((tag: string) => (
+                          <a
+                            href="#"
+                            class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-node-indigo">
+                            {tag}
+                          </a>
+                        ))}
+                      </div>
+                    </div>
+                    <a
+                      href={"/blog/" + post.slug}
+                      class="relative flex flex-col gap-2">
+                      <h2 class="font-title text-mobile-h3 text-crypto-frost md:text-h4 ">
+                        {post.data.title}
+                      </h2>
+                      <p class="font-body text-body-sm text-crypto-frost/50">
+                        {post.data.description}
+                      </p>
                     </a>
-                    <div class="flex max-w-xl flex-col gap-2 md:gap-4 justify-start items-start">
-                      <div class="flex flex-col flex-wrap items-start sm:items-center justify-start gap-2 sm:flex-row">
+                    <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4">
+                      <img
+                        src={post.data.author.image}
+                        alt={post.data.author.name}
+                        class="h-12 w-12 rounded-full "
+                      />
+                      <div class="flex flex-col gap-0">
+                        <p class="font-display text-nav text-crypto-frost">
+                          {post.data.author.name}
+                        </p>
+                        <p class="font-body text-body-sm text-crypto-frost/50">
+                          {post.data.author.title}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ) : null
+            )
+          }
+          <div
+            class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-24">
+            {
+              posts.map((post, index) =>
+                index > 0 ? (
+                  <article class="col-span-1 flex w-full max-w-xl flex-col items-start justify-start gap-2 sm:max-w-4xl">
+                    <a href={"/blog/" + post.slug}>
+                      <img
+                        src={post.data.heroImage}
+                        alt={post.data.title}
+                        class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover"
+                      />
+                    </a>
+                    <div class="flex max-w-xl flex-col gap-2 md:gap-4">
+                      <div class="flex flex-col flex-wrap items-start justify-start gap-2">
                         <time
                           datetime="1914-12-20"
-                          class="text-body-sm lowercase text-crypto-frost/50"
-                          title={formatDate(post.data.pubDate)}>
+                          title={formatDate(post.data.pubDate)}
+                          class="text-body-sm lowercase text-crypto-frost/50">
                           {formatDate(post.data.pubDate)}
                         </time>
-                        <div class="flex flex-row items-start justify-start gap-2">
+                        <div class="flex flex-row flex-wrap  items-start justify-start gap-2 md:-mx-2">
                           {post.data.tags.map((tag: string) => (
                             <a
                               href="#"
@@ -72,15 +132,17 @@ const posts = (await getCollection("blog")).sort(
                           ))}
                         </div>
                       </div>
-                      <a href={"/blog/" + post.slug} class="relative flex flex-col gap-2">
-                        <h2 class="font-title text-mobile-h3 text-crypto-frost md:text-h4 ">
+                      <a
+                        href={"/blog/" + post.slug}
+                        class="relative flex flex-col gap-2">
+                        <h2 class="font-title text-mobile-h3 text-crypto-frost md:text-h5 ">
                           {post.data.title}
                         </h2>
                         <p class="font-body text-body-sm text-crypto-frost/50">
                           {post.data.description}
                         </p>
                       </a>
-                      <div class="relative mt-4 flex flex-row items-center gap-2 md:mt-8">
+                      <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4">
                         <img
                           src={post.data.author.image}
                           alt={post.data.author.name}
@@ -97,66 +159,6 @@ const posts = (await getCollection("blog")).sort(
                       </div>
                     </div>
                   </article>
-              ) : (
-                null
-              )
-            )
-          }
-            <div class="w-full grid grid-cols-1 gap-8 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {
-              posts.map((post, index) =>
-                index > 0 ? (
-                    <article class="col-span-1 flex w-full max-w-xl sm:max-w-4xl flex-col items-start justify-start gap-2">
-                      <a href={"/blog/" + post.slug}>
-                        <img
-                          src={post.data.heroImage}
-                          alt={post.data.title}
-                          class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover"
-                        />
-                      </a>
-                      <div class="flex max-w-xl flex-col gap-2 md:gap-4">
-                        <div class="flex flex-col flex-wrap items-start justify-start gap-2">
-                          <time
-                            datetime="1914-12-20"
-                            title={formatDate(post.data.pubDate)}
-                            class="text-body-sm lowercase text-crypto-frost/50">
-                            {formatDate(post.data.pubDate)}
-                          </time>
-                          <div class="md:-mx-2 flex flex-row  flex-wrap items-start justify-start gap-2">
-                            {post.data.tags.map((tag: string) => (
-                              <a
-                                href="#"
-                                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-node-indigo">
-                                {tag}
-                              </a>
-                            ))}
-                          </div>
-                        </div>
-                        <a href={"/blog/" + post.slug}  class="relative flex flex-col gap-2">
-                          <h2 class="font-title text-mobile-h3 text-crypto-frost md:text-h5 ">
-                            {post.data.title}
-                          </h2>
-                          <p class="font-body text-body-sm text-crypto-frost/50">
-                            {post.data.description}
-                          </p>
-                        </a>
-                        <div class="relative mt-4 flex flex-row items-center gap-2 md:mt-8">
-                          <img
-                            src={post.data.author.image}
-                            alt={post.data.author.name}
-                            class="h-12 w-12 rounded-full "
-                          />
-                          <div class="flex flex-col gap-0">
-                            <p class="font-display text-nav text-crypto-frost">
-                              {post.data.author.name}
-                            </p>
-                            <p class="font-body text-body-sm text-crypto-frost/50">
-                              {post.data.author.title}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </article>
                 ) : null
               )
             }
