@@ -39,7 +39,7 @@ const posts = (await getCollection("blog")).sort(
           </p>
         </div>
         <div
-          class="flex h-auto w-full flex-col items-center justify-start gap-8 md:gap-32">
+          class="flex h-auto w-full flex-col items-center justify-start gap-16 md:gap-32">
           {
             posts.map((post, index) =>
               index === 0 ? (
@@ -102,7 +102,7 @@ const posts = (await getCollection("blog")).sort(
             )
           }
           <div
-            class="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-24">
+            class="grid w-full grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3 lg:gap-x-8 lg:gap-y-24">
             {
               posts.map((post, index) =>
                 index > 0 ? (
