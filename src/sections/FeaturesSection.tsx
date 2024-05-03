@@ -208,6 +208,7 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
   return (
     <div
       className="flex w-full flex-col items-center justify-start gap-10 text-crypto-frost md:w-[600px] md:gap-12 lg:w-[900px] "
+      key={card.id.toString()}
       id={card.id.toString()}>
       <div className="relative flex w-full flex-row items-start justify-center rounded-xl bg-node-indigo">
         <img

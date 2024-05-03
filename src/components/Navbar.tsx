@@ -14,22 +14,22 @@ const announcement = {
 const navLinks = [
   {
     name: "Features",
-    href: "/#featuresSectionSeparator",
+    href: "/#featuresSection",
     target: "_self",
   },
   {
     name: "Use Cases",
-    href: "/#useCasesSectionSeparator",
+    href: "/#useCasesSection",
     target: "_self",
   },
   {
     name: "Team",
-    href: "/#teamSectionSeparator",
+    href: "/#teamSection",
     target: "_self",
   },
   {
     name: "Contact",
-    href: "/#contactSectionSeparator",
+    href: "/#contactSection",
     target: "_self",
   },
   {

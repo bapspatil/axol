@@ -10,9 +10,9 @@ const lenis = new Lenis({
 })
 
 // Get scroll value.
-lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
-  console.log({ scroll, limit, velocity, direction, progress })
-})
+// lenis.on("scroll", ({ scroll, limit, velocity, direction, progress }) => {
+//   // console.log({ scroll, limit, velocity, direction, progress })
+// })
 
 function raf(time) {
   lenis.raf(time)
@@ -32,7 +32,7 @@ scrollButtons.forEach((button) => {
       $el = document.getElementById(target.replace("#", ""))
 
     // Use lenis.scrollTo() to scroll the page to the right element
-    if (target === "#featuresSection" || target === "#featuresSectionTitle") {
+    if (target === "#featuresSection") {
       lenis.scrollTo($el, {
         offset: 110,
         immediate: false,
