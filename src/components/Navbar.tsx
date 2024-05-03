@@ -14,7 +14,7 @@ const announcement = {
 const navLinks = [
   {
     name: "Features",
-    href: "/#featuresSectionTitle",
+    href: "/#featuresSectionSeparator",
     target: "_self",
   },
   {
@@ -24,7 +24,7 @@ const navLinks = [
   },
   {
     name: "Team",
-    href: "/#teamSection",
+    href: "/#teamSectionSeparator",
     target: "_self",
   },
   {

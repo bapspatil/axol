@@ -1,5 +1,6 @@
 ---
 interface Props {
+  id?: string
   topVector: "1" | "2"
   topVectorColor: string
   bottomVector:
@@ -9,6 +10,7 @@ interface Props {
   backgroundColor: string
 }
 const {
+  id,
   topVector,
   topVectorColor,
   bottomVector,
@@ -22,7 +24,9 @@ Astro.props
   class:list={[
     "relative h-16 w-full overflow-hidden md:h-16 lg:h-32",
     backgroundColor,
-  ]}>
+  ]}
+  id={id}
+  >
   <div class="line-height-0 absolute left-0 top-0 w-full overflow-hidden">
     {
       topVector === "1" && (

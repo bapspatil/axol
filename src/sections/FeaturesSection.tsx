@@ -158,10 +158,8 @@ export default function FeaturesSection() {
   return (
     <section
       ref={targetRef}
-      className="relative h-auto w-full gap-4 bg-cryptowave-sky px-4 py-8 md:h-[300vh] md:w-auto md:py-16"
-      id="featuresSection">
+      className="relative h-auto w-full gap-4 bg-cryptowave-sky px-4 py-8 md:h-[300vh] md:w-auto md:py-16">
       <h2
-        id="featuresSectionTitle"
         className="relative w-full text-center font-title text-mobile-h2 text-crypto-frost md:text-h2">
         What we offer
       </h2>
