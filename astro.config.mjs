@@ -12,4 +12,7 @@ export default defineConfig({
   output: "server",
   adapter: cloudflare(),
   site: "https://axol.io",
+  prefetch: {
+    prefetchAll: true,
+  }
 })
