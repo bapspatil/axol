@@ -65,7 +65,7 @@ const navContainer = {
 
 export default function Navbar() {
   const $isMenuOpen = useStore(isMenuOpen)
-  const ref = useRef<HTMLElement>(document.getElementById("homeSection"))
+  const ref = useRef<HTMLElement>(document.getElementById("topSection"))
   const isInView = useInView(ref, { once: false })
 
   return (

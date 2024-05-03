@@ -23,7 +23,7 @@ const posts = (await getCollection("blog")).sort(
   richLinkPreview={richLinkPreview}>
   <main>
     <div
-      class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
+      class="relative flex sm:h-screen w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
       <Image
         src="/images/hero-mesh.webp"
         alt="A mesh background for Axol.io"
@@ -31,9 +31,9 @@ const posts = (await getCollection("blog")).sort(
         height={2560}
         class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
       />
-      <div class="z-10 mx-auto flex w-full flex-col gap-12 xl:px-16">
+      <div class="z-10 mx-auto flex w-full sm:h-screen flex-col gap-12 xl:px-16 justify-start">
         <div class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
-          <h1 class="font-display text-mobile-h1 md:text-h1">Blog</h1>
+          <h1 class="font-display text-mobile-h1 md:text-h1 lowercase">Blog</h1>
           <p class="font-body text-body-md">
             Learn more about how Axol.io and what we do.
           </p>
@@ -45,7 +45,7 @@ const posts = (await getCollection("blog")).sort(
               index === 0 ? (
                 <article class="flex max-w-4xl flex-col items-start justify-start gap-2 sm:flex-row md:justify-between md:gap-8">
                   <a
-                    id="homeSection"
+                    id="topSection"
                     href={"/blog/" + post.slug}>
                     <img
                       src={post.data.heroImage}

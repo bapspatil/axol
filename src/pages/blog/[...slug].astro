@@ -56,7 +56,7 @@ const { Content } = await entry.render()
       <article
         class="format format-sm sm:format-base lg:format-lg format-blue dark:format-invert mx-auto flex w-full max-w-2xl flex-col gap-4">
         <header
-          id="homeSection"
+          id="topSection"
           class="not-format flex flex-col gap-4">
           <Image
             src={heroImage + ""}
@@ -73,7 +73,7 @@ const { Content } = await entry.render()
                 src={author.image}
                 alt={author.name}
               />
-              <div>
+              <div class="flex flex-col">
                 <p class="text-body-sm text-crypto-frost">
                   {author.name}
                 </p>
@@ -100,7 +100,7 @@ const { Content } = await entry.render()
             {description}
           </p>
           <div class="h-[1px] w-full bg-node-indigo"></div>
-          <Content />
+          <Content id="content" />
         </div>
         <div
           class="flex w-full flex-row items-center justify-center gap-2 md:m-4">
@@ -108,6 +108,7 @@ const { Content } = await entry.render()
             tags.map((tag: string) => (
               <a
                 href="#"
+                id="tag"
                 class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain">
                 {tag}
               </a>
@@ -145,6 +146,10 @@ const { Content } = await entry.render()
     color: rgba(21, 0, 46, 1);
   }
 
+  #tag { 
+    text-decoration: none;
+  }
+
   h1,
   h2,
   h3,
@@ -158,37 +163,40 @@ const { Content } = await entry.render()
   }
 
   h1 {
-    font-size: 3.2rem;
-    @media (max-width: 768px) {
-      font-size: 2.4rem;
-    }
-  }
-
-  h2 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     @media (max-width: 768px) {
       font-size: 1.8rem;
     }
   }
 
-  h3 {
-    font-size: 1.8rem;
+  h2 {
+    font-size: 2rem;
     @media (max-width: 768px) {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    @media (max-width: 768px) {
+      font-size: 1.4rem;
     }
   }
 
   h4 {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     @media (max-width: 768px) {
       font-size: 1.2rem;
     }
   }
 
   h5 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     @media (max-width: 768px) {
       font-size: 1rem;
     }
+  }
+  a, a * {
+    text-decoration: underline;
   }
 </style>
