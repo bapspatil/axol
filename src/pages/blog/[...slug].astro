@@ -100,7 +100,9 @@ const { Content } = await entry.render()
             {description}
           </p>
           <div class="h-[1px] w-full bg-node-indigo"></div>
-          <Content id="content" />
+          <div id="content">
+            <Content />
+          </div>
         </div>
         <div
           class="flex w-full flex-row items-center justify-center gap-2 md:m-4">
@@ -138,16 +140,12 @@ const { Content } = await entry.render()
   />
 </Layout>
 <style is:global>
-  p,
-  li {
+  #content p,
+  #content li {
     font-size: 1rem;
     line-height: 170%;
     font-weight: 500;
     color: rgba(21, 0, 46, 1);
-  }
-
-  #tag { 
-    text-decoration: none;
   }
 
   h1,
@@ -157,9 +155,8 @@ const { Content } = await entry.render()
   h5 {
     font-family: "Panamera", sans-serif;
     line-height: 120%;
-    font-weight: 700;
+    font-weight: 600;
     color: rgba(40, 51, 139, 1);
-    margin-bottom: -1rem;
   }
 
   h1 {
@@ -196,7 +193,7 @@ const { Content } = await entry.render()
       font-size: 1rem;
     }
   }
-  a, a * {
+  #content a, #content a * {
     text-decoration: underline;
   }
 </style>
