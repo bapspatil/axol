@@ -73,7 +73,7 @@ export default function Navbar() {
       <a
         className={
           `fixed z-20 mt-0 hidden flex-row items-center justify-center gap-2 rounded-bl-full rounded-br-full border-transparent bg-axol-coral px-6 py-1 shadow-md transition-all duration-300 hover:border-node-indigo md:flex md:border-b-2 md:border-l-2 md:border-crypto-frost/75 ` +
-          (isInView ? "-translate-y-32 md:hidden" : "md:visible")
+          (isInView ? "opacity-0 md:hidden" : "opacity-100 md:visible")
         }
         href={announcement.url}>
         <img
@@ -88,7 +88,7 @@ export default function Navbar() {
         <a
           className={
             `hidden h-auto w-fit items-center justify-center gap-2 rounded-tl-full rounded-tr-full border-x-2 border-t-2 border-transparent bg-axol-coral px-6 py-1 transition-all duration-300 hover:border-node-indigo md:inline-flex ` +
-            (isInView ? "md:visible" : "-translate-y-32 md:invisible")
+            (isInView ? "opacity-100 md:visible" : "opacity-0 md:invisible")
           }
           href={announcement.url}>
           <img

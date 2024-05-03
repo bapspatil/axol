@@ -129,11 +129,12 @@ const twitterHandle = "@axol_io"
       title="Axol.io Blog"
       href={`${Astro.site}rss.xml`}
     />
+    <ViewTransitions />
   </head>
   <body>
     <Navbar client:only="react" />
     <slot />
-    <Footer />
+    <Footer transition:persist/>
     <script src="/src/utils/lenisSmoothScroll.js"></script>
   </body>
 </html>
