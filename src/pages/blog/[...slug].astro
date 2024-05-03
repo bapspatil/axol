@@ -35,7 +35,7 @@ const { Content } = await entry.render()
   <main
     class="relative flex w-full flex-col gap-4 overflow-x-hidden bg-node-indigo pb-8 pt-32 text-shadow-blockchain antialiased md:px-16 md:pb-16 md:pt-44 lg:pt-48">
     <div
-      class="relative hidden z-10 mx-auto sm:flex w-full max-w-screen-xl justify-start rounded-lg md:px-4">
+      class="relative z-10 mx-auto hidden w-full max-w-screen-xl justify-start rounded-lg sm:flex md:px-4">
       <Button
         href="/blog"
         text="Back"
@@ -67,20 +67,20 @@ const { Content } = await entry.render()
           />
           <address class="flex items-center not-italic">
             <div
-              class="inline-flex items-start gap-2 sm:gap-4 px-4 text-body-sm flex-row md:px-0">
+              class="inline-flex flex-row items-start gap-2 px-4 text-body-sm sm:gap-4 md:px-0">
               <img
                 class="h-16 w-16 rounded-full"
                 src={author.image}
                 alt={author.name}
               />
               <div>
-                <p class="text-crypto-frost text-body-sm">
+                <p class="text-body-sm text-crypto-frost">
                   {author.name}
                 </p>
-                <p class="text-crypto-frost/75 text-body-sm">
+                <p class="text-body-sm text-crypto-frost/75">
                   {author.title}
                 </p>
-                <p class="text-crypto-frost/75 text-body-sm">
+                <p class="text-body-sm text-crypto-frost/75">
                   <time
                     datetime="2022-02-08"
                     title={formatDate(pubDate)}>
