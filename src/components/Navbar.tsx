@@ -19,7 +19,7 @@ const navLinks = [
   },
   {
     name: "Use Cases",
-    href: "/#useCasesSection",
+    href: "/#useCasesSectionSeparator",
     target: "_self",
   },
   {
@@ -29,7 +29,7 @@ const navLinks = [
   },
   {
     name: "Contact",
-    href: "/#contactSection",
+    href: "/#contactSectionSeparator",
     target: "_self",
   },
   {
@@ -168,13 +168,16 @@ export default function Navbar() {
               exit="hidden"
               variants={navContainer}>
               {navLinks.map((item) => (
-                <a
-                  key={item.name}
-                  href={item.href}
-                  target={item.target}
-                  className="flex w-fit rounded-[4px] border-b-4 border-transparent font-display text-nav lowercase text-node-indigo transition-all duration-300 hover:border-node-indigo">
-                  {item.name}
-                </a>
+                <button
+                  onClick={() => isMenuOpen.set(!$isMenuOpen)}>
+                  <a
+                    key={item.name}
+                    href={item.href}
+                    target={item.target}
+                    className="flex w-fit rounded-[4px] border-b-4 border-transparent font-display text-nav lowercase text-node-indigo transition-all duration-300 hover:border-node-indigo">
+                    {item.name}
+                  </a>
+                </button>
               ))}
             </motion.div>
           </Dialog.Panel>
