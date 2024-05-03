@@ -145,7 +145,7 @@ export default function Navbar() {
           className="md:hidden"
           open={$isMenuOpen}
           onClose={() => isMenuOpen.set(!$isMenuOpen)}>
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-30 flex w-full flex-col items-end justify-start gap-4 overflow-y-auto px-4 py-[50px]">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-30 flex w-full h-screen flex-col items-end justify-start gap-4 overflow-y-auto px-4 py-[50px]">
             <div className="flex w-full items-start justify-end">
               <button
                 type="button"
@@ -180,6 +180,10 @@ export default function Navbar() {
                 </button>
               ))}
             </motion.div>
+            <div className="w-full h-full">
+              <button className="w-full h-full"
+                onClick={() => isMenuOpen.set(!$isMenuOpen)} />
+            </div>
           </Dialog.Panel>
         </Dialog>
       </header>
