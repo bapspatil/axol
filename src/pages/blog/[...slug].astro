@@ -44,12 +44,9 @@ const { Content } = await entry.render()
         >Back</Button
       >
     </div>
-    <Image
-      src="/images/hero-mesh.webp"
-      alt="A mesh background for Axol.io"
-      width={2560}
-      height={2560}
-      class="absolute inset-0 z-0 h-full w-full object-cover mix-blend-lighten"
+    <div 
+        class="absolute inset-0 z-0 h-full bg-repeat w-full mix-blend-lighten"
+        style="background-image: url('/images/hero-mesh.webp');" 
     />
     <div
       class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-between rounded-lg md:px-4">
@@ -68,9 +65,9 @@ const { Content } = await entry.render()
           />
           <address class="flex items-center not-italic">
             <div
-              class="inline-flex flex-row items-start gap-2 px-4 text-body-sm sm:gap-4 md:px-0">
+              class="inline-flex flex-row items-start gap-2 px-4 text-body-sm sm:gap-4 md:px-0 group">
               <img
-                class="h-16 w-16 rounded-full"
+                class="h-16 w-16 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
                 src={author.image}
                 alt={author.name}
               />
@@ -112,7 +109,7 @@ const { Content } = await entry.render()
               <a
                 href="#"
                 id="tag"
-                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain">
+                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain hover:rotate-6 transition-all duration-300 ease-in-out">
                 {tag}
               </a>
             ))

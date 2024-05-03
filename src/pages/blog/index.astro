@@ -24,12 +24,9 @@ const posts = (await getCollection("blog")).sort(
   <main>
     <div
       class="relative flex sm:h-screen w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
-      <Image
-        src="/images/hero-mesh.webp"
-        alt="A mesh background for Axol.io"
-        width={2560}
-        height={2560}
-        class="absolute inset-0 h-full w-full object-cover mix-blend-lighten"
+      <div 
+        class="absolute inset-0 z-0 h-full bg-repeat bg-cover w-full mix-blend-lighten"
+        style="background-image: url('/images/hero-mesh.webp');" 
       />
       <div class="z-10 mx-auto flex w-full sm:h-screen flex-col gap-12 xl:px-16 justify-start">
         <div class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
@@ -50,7 +47,7 @@ const posts = (await getCollection("blog")).sort(
                     <img
                       src={post.data.heroImage}
                       alt={post.data.title}
-                      class="aspect-[16/9] w-full rounded-lg object-cover"
+                      class="aspect-[16/9] w-full rounded-lg object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                       transition:name="hero"
                     />
                   </a>
@@ -62,11 +59,11 @@ const posts = (await getCollection("blog")).sort(
                         title={formatDate(post.data.pubDate)}>
                         {formatDate(post.data.pubDate)}
                       </time>
-                      <div class="flex flex-row items-start justify-start gap-2">
+                      <div class="flex flex-row items-start justify-start gap-2 ">
                         {post.data.tags.map((tag: string) => (
                           <a
                             href="#"
-                            class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain">
+                            class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain hover:rotate-6 transition-all duration-300 ease-in-out">
                             {tag}
                           </a>
                         ))}
@@ -82,11 +79,11 @@ const posts = (await getCollection("blog")).sort(
                         {post.data.description}
                       </p>
                     </a>
-                    <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4">
+                    <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4 group">
                       <img
                         src={post.data.author.image}
                         alt={post.data.author.name}
-                        class="h-12 w-12 rounded-full "
+                        class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
                       />
                       <div class="flex flex-col gap-0">
                         <p class="font-display text-nav text-crypto-frost">
@@ -112,7 +109,7 @@ const posts = (await getCollection("blog")).sort(
                       <img
                         src={post.data.heroImage}
                         alt={post.data.title}
-                        class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover"
+                        class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                         transition:name="hero"
                       />
                     </a>
@@ -124,7 +121,7 @@ const posts = (await getCollection("blog")).sort(
                           class="text-body-sm lowercase text-crypto-frost/50">
                           {formatDate(post.data.pubDate)}
                         </time>
-                        <div class="flex flex-row flex-wrap  items-start justify-start gap-2 md:-mx-2">
+                        <div class="flex flex-row flex-wrap  items-start justify-start gap-2 md:-mx-2 =">
                           {post.data.tags.map((tag: string) => (
                             <a
                               href="#"
@@ -144,11 +141,11 @@ const posts = (await getCollection("blog")).sort(
                           {post.data.description}
                         </p>
                       </a>
-                      <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4">
+                      <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4 group">
                         <img
                           src={post.data.author.image}
                           alt={post.data.author.name}
-                          class="h-12 w-12 rounded-full "
+                          class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
                         />
                         <div class="flex flex-col gap-0">
                           <p class="font-display text-nav text-crypto-frost">

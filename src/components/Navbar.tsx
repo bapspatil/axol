@@ -107,7 +107,7 @@ export default function Navbar() {
             className="rounded-full border-x border-b-4 border-t border-node-indigo bg-axol-coral px-4 py-2 md:rounded-none md:border-0 md:bg-transparent md:px-0 md:pb-[4px] md:pt-0">
             <span className="sr-only">Axol.io</span>
             <img
-              className="h-[36px] w-auto md:h-10"
+              className="h-[36px] w-auto md:h-10 hover:scale-105 transition-all duration-300 ease-in-out"
               src="/images/logo-primary-node-indigo.svg"
               alt="Axol.io Logo"
             />
