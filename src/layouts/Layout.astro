@@ -2,7 +2,6 @@
 import { ViewTransitions } from "astro:transitions"
 import Footer from "../components/Footer.astro"
 import Navbar from "../components/Navbar.tsx"
-import "../styles/global.css"
 import NewNavbar from "../components/NewNavbar.astro"
 
 interface Props {
@@ -130,6 +129,7 @@ const twitterHandle = "@axol_io"
       title="Axol.io Blog"
       href={`${Astro.site}rss.xml`}
     />
+    <link rel="stylesheet" href="/src/styles/global.css" />
     <ViewTransitions />
   </head>
   <body>
@@ -138,7 +138,6 @@ const twitterHandle = "@axol_io"
     <slot />
     <Footer transition:persist />
     <script src="/src/utils/lenisSmoothScroll.js"></script>
-    
   </body>
 </html>
 
