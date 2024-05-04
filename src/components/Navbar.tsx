@@ -79,6 +79,8 @@ export default function Navbar() {
         <img
           src={announcement.icon}
           alt="Announcement"
+          loading="eager"
+          decoding="sync"
         />
         <p className="font-body text-body-sm text-node-indigo">
           {announcement.text}
@@ -94,6 +96,8 @@ export default function Navbar() {
           <img
             src={announcement.icon}
             alt="Announcement"
+            loading="eager"
+            decoding="sync"
           />
           <p className="font-body text-body-sm text-node-indigo ">
             {announcement.text}
@@ -110,6 +114,8 @@ export default function Navbar() {
               className="h-[36px] w-auto md:h-10 hover:scale-105 transition-all duration-300 ease-in-out"
               src="/images/logo-primary-node-indigo.svg"
               alt="Axol.io Logo"
+              loading="eager"
+              decoding="sync"
             />
           </a>
           <div className="flex items-start justify-end md:hidden">
@@ -124,6 +130,8 @@ export default function Navbar() {
                 className="h-8 w-8"
                 aria-hidden="true"
                 alt="Menu icon"
+                loading="eager"
+                decoding="sync"
               />
             </button>
           </div>
@@ -158,6 +166,8 @@ export default function Navbar() {
                   className="h-8 w-8"
                   aria-hidden="true"
                   alt="Close menu icon"
+                  loading="eager"
+                  decoding="sync"
                 />
               </button>
             </div>
@@ -195,6 +205,8 @@ export default function Navbar() {
             <img
               src={announcement.icon}
               alt="Announcement"
+              loading="eager"
+              decoding="sync"
             />
             <p className="font-body text-body-sm text-node-indigo">
               {announcement.text}
@@ -206,6 +218,8 @@ export default function Navbar() {
             <img
               src={announcement.icon}
               alt="Announcement"
+              loading="eager"
+              decoding="sync"
             />
             <p className="font-body text-body-sm text-node-indigo">
               {announcement.text}

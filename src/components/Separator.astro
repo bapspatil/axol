@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Props {
   id?: string
   topVector: "1" | "2"
@@ -64,6 +66,8 @@ Astro.props
       backgroundClasses,
     ]}
     alt="Bottom Vector Background"
+    loading="lazy"
+    decoding="async"
     src={bottomVector}
   />
 </section>

@@ -85,6 +85,8 @@ const posts = (await getCollection("blog")).sort(
                         src={post.data.author.image}
                         alt={post.data.author.name}
                         class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                        loading="eager"
+                        decoding="sync"
                       />
                       <div class="flex flex-col gap-0">
                         <p class="font-display text-nav text-crypto-frost">
@@ -113,6 +115,7 @@ const posts = (await getCollection("blog")).sort(
                         class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
                         transition:name="hero"
                         loading="lazy"
+                        decoding="async"
                       />
                     </a>
                     <div class="flex max-w-xl flex-col gap-2 md:gap-4">
@@ -148,6 +151,9 @@ const posts = (await getCollection("blog")).sort(
                           src={post.data.author.image}
                           alt={post.data.author.name}
                           class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                          loading="lazy"
+                          decoding="async"
+                          
                         />
                         <div class="flex flex-col gap-0">
                           <p class="font-display text-nav text-crypto-frost">

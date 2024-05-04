@@ -168,6 +168,7 @@ export default function FeaturesSection() {
         alt="Mesh background for the Features Section"
         src="/images/features-mesh.webp"
         loading="lazy"
+        decoding="async"
       />
       <div className="sticky top-0 flex h-auto w-full items-center overflow-hidden md:h-screen">
         <motion.div
@@ -215,6 +216,7 @@ const FeatureCardUI = ({ card }: { card: FeatureCard }) => {
         <img
           className="relative aspect-[3/4] w-full flex-1 overflow-hidden rounded-lg object-cover sm:aspect-video md:h-[500px]"
           loading="lazy"
+          decoding="async"
           alt={card.title}
           src={card.image}
         />
