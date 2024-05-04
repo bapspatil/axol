@@ -3,6 +3,7 @@ import { ViewTransitions } from "astro:transitions"
 import Footer from "../components/Footer.astro"
 import Navbar from "../components/Navbar.tsx"
 import NewNavbar from "../components/NewNavbar.astro"
+import "../styles/global.css"
 
 interface Props {
   title: string
@@ -129,7 +130,6 @@ const twitterHandle = "@axol_io"
       title="Axol.io Blog"
       href={`${Astro.site}rss.xml`}
     />
-    <link rel="stylesheet" href="/src/styles/global.css" />
     <ViewTransitions />
   </head>
   <body>
