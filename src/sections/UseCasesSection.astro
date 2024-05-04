@@ -40,6 +40,7 @@ const useCases = [
   <img
     class="absolute bottom-0 z-0 w-full shrink-0 overflow-hidden object-cover mix-blend-screen hover:scale-105 transition-all duration-300 ease-in-out"
     alt="Mesh background for use cases section"
+    loading="lazy"
     src="/images/usecases-mesh.webp"
   />
 
@@ -61,6 +62,7 @@ const useCases = [
             </div>
             <img
               class={`${useCase.imageSize} transition-all duration-300  group-hover:scale-110 group-hover:mix-blend-plus-lighter`}
+              loading="lazy"
               src={useCase.image}
               alt={useCase.title}
             />

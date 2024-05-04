@@ -167,6 +167,7 @@ export default function FeaturesSection() {
         className="absolute bottom-0 left-0 right-0 mx-auto h-auto w-screen mix-blend-screen"
         alt="Mesh background for the Features Section"
         src="/images/features-mesh.webp"
+        loading="lazy"
       />
       <div className="sticky top-0 flex h-auto w-full items-center overflow-hidden md:h-screen">
         <motion.div
