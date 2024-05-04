@@ -1,8 +1,9 @@
 ---
 import { ViewTransitions } from "astro:transitions"
 import Footer from "../components/Footer.astro"
-import Navbar from "../components/Navbar"
+import Navbar from "../components/Navbar.tsx"
 import "../styles/global.css"
+import NewNavbar from "../components/NewNavbar.astro"
 
 interface Props {
   title: string
@@ -133,8 +134,11 @@ const twitterHandle = "@axol_io"
   </head>
   <body>
     <Navbar client:only="react" />
+    <!-- <NewNavbar transition:persist /> -->
     <slot />
-    <Footer transition:persist/>
+    <Footer transition:persist />
     <script src="/src/utils/lenisSmoothScroll.js"></script>
+    
   </body>
 </html>
+

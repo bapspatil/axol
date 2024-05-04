@@ -1,0 +1,184 @@
+---
+import { isMenuOpen } from "../utils/store"
+import Ticker from "framer-motion-ticker"
+import { Dialog } from "@headlessui/react"
+
+const announcement = {
+  text: "Now running infra for Lido, Gnosis, Origin!",
+  icon: "/images/icon-announcement.svg",
+  url: "#",
+}
+
+const navLinks = [
+  {
+    name: "Features",
+    href: "/#featuresSection",
+    target: "_self",
+  },
+  {
+    name: "Use Cases",
+    href: "/#useCasesSection",
+    target: "_self",
+  },
+  {
+    name: "Team",
+    href: "/#teamSection",
+    target: "_self",
+  },
+  {
+    name: "Contact",
+    href: "/#contactSection",
+    target: "_self",
+  },
+  {
+    name: "Blog",
+    href: "/blog",
+    target: "_self",
+  },
+  {
+    name: "Faucet",
+    href: "https://faucet.axol.io",
+    target: "_blank",
+  },
+]
+---
+<div class="flex w-full flex-col items-center justify-start gap-12 md:w-auto">
+      <a
+      id="announcementBadgeTop"
+        class={
+          `fixed z-20 mt-0 hidden flex-row items-center justify-center gap-2 rounded-bl-full rounded-br-full border-transparent bg-axol-coral px-6 py-1 shadow-md transition-all duration-300 hover:border-node-indigo md:flex md:border-b-2 md:border-l-2 md:border-crypto-frost/75 opacity-0` 
+          // + (isInView ? "opacity-0 md:hidden" : "opacity-100 md:visible")
+        }
+        href={announcement.url}>
+        <img
+          src={announcement.icon}
+          alt="Announcement"
+        />
+        <p class="font-body text-body-sm text-node-indigo">
+          {announcement.text}
+        </p>
+      </a>
+      <header class="fixed z-20 mt-12 inline-flex w-full flex-col items-center justify-start md:mt-12 md:w-auto">
+        <a
+        id="announcementBadgeBottom"
+          class={
+            `hidden h-auto w-fit items-center justify-center gap-2 rounded-tl-full rounded-tr-full border-x-2 border-t-2 border-transparent bg-axol-coral px-6 py-1 transition-all duration-300 hover:border-node-indigo md:inline-flex ` 
+            // + (isInView ? "opacity-100 md:visible" : "opacity-0 md:invisible")
+          }
+          href={announcement.url}>
+          <img
+            src={announcement.icon}
+            alt="Announcement"
+          />
+          <p class="font-body text-body-sm text-node-indigo ">
+            {announcement.text}
+          </p>
+        </a>
+        <nav
+          class="flex w-full items-center justify-between gap-12 rounded-full px-4 md:w-auto md:border-l-2 md:border-t-2 md:border-crypto-frost/75 md:bg-axol-coral md:px-8 md:pb-2 md:pt-[10px] md:shadow-md"
+          aria-label="Global">
+          <a
+            href="/"
+            class="rounded-full border-x border-b-4 border-t border-node-indigo bg-axol-coral px-4 py-2 md:rounded-none md:border-0 md:bg-transparent md:px-0 md:pb-[4px] md:pt-0">
+            <span class="sr-only">Axol.io</span>
+            <img
+              class="h-[36px] w-auto md:h-10 hover:scale-105 transition-all duration-300 ease-in-out"
+              src="/images/logo-primary-node-indigo.svg"
+              alt="Axol.io Logo"
+            />
+          </a>
+          <div class="flex items-start justify-end md:hidden">
+            <button
+              type="button"
+              class="flex rounded-[6px] border-x border-b-4 border-t border-node-indigo bg-axol-coral p-2 md:hidden"
+              aria-label="Menu button">
+              <span class="sr-only">Open main menu</span>
+              <img
+                src="/images/icon-menu.svg"
+                class="h-8 w-8"
+                aria-hidden="true"
+                alt="Menu icon"
+              />
+            </button>
+          </div>
+          <div class="hidden md:flex md:gap-x-6">
+            {navLinks.map((item) => (
+              <a
+                href={item.href}
+                target={item.target}
+                data-target={item.href}
+                class="rounded-[4px] border-b-4 border-transparent font-display text-nav lowercase text-node-indigo transition-all duration-300 hover:border-node-indigo">
+                {item.name}
+              </a>
+            ))}
+          </div>
+        </nav>
+        <!-- <Dialog
+          as="div"
+          class="md:hidden"
+          open={$isMenuOpen.get()}
+          onClose={() => isMenuOpen.set(!$isMenuOpen)}>
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-30 flex w-full h-screen flex-col items-end justify-start gap-4 overflow-y-auto px-4 py-[50px]">
+            <div class="flex w-full items-start justify-end">
+              <button
+                type="button"
+                class="flex rounded-[6px] border-x border-b border-t border-node-indigo bg-axol-coral p-2"
+                aria-label="Close button">
+                <span class="sr-only">Close menu</span>
+                <img
+                  src="/images/icon-close.svg"
+                  class="h-8 w-8"
+                  aria-hidden="true"
+                  alt="Close menu icon"
+                />
+              </button>
+            </div>
+            <div
+              class=" flex flex-col items-center justify-center gap-6 rounded-[6px] border-x border-b-6 border-t border-node-indigo bg-axol-coral px-24 py-6 text-center">
+              {navLinks.map((item) => (
+                <button>
+                  <a
+                    href={item.href}
+                    target={item.target}
+                    class="flex w-fit rounded-[4px] border-b-4 border-transparent font-display text-nav lowercase text-node-indigo transition-all duration-300 hover:border-node-indigo">
+                    {item.name}
+                  </a>
+                </button>
+              ))}
+            </div>
+            <div class="w-full h-full">
+              <button class="w-full h-full"/>
+            </div>
+          </Dialog.Panel>
+        </Dialog> -->
+      </header>
+      <div class="fixed z-20 mt-0 flex w-full flex-row gap-2 bg-axol-coral py-2 shadow-md md:static md:z-0 md:block md:h-0 md:w-0 md:py-0">
+      </div>
+    </div>
+    <script>
+      import { inView, animate } from "motion"
+
+      const topSection = document.getElementById("topSection")
+      inView("#topSection", ({ target }) => {
+  animate(
+    "#announcementBadgeTop",
+    { opacity: 0, transform: "none" },
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+  )
+  animate(
+    "#announcementBadgeBottom",
+    { opacity: 1, transform: "none" },
+    { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+  )
+  return () => {animate(
+      "#announcementBadgeTop",
+      { opacity: 1, transform: "none" },
+      { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+    )
+    animate(
+      "#announcementBadgeBottom",
+      { opacity: 0, transform: "none" },
+      { delay: 0.2, duration: 0.9, easing: [0.17, 0.55, 0.55, 1] }
+    )}
+})
+    </script>
