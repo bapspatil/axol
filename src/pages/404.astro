@@ -1,0 +1,72 @@
+---
+import { Image } from "astro:assets"
+import Layout from "../layouts/Layout.astro"
+import Button from "../components/Button.astro"
+import Separator from "../components/Separator.astro"
+
+const title = "Not Found • Axol.io"
+const description =
+  "Axol.io empowers institutional staking infrastructure with unrivaled uptime, harnessing self-healing nodes and renewable energy across Latin America."
+const richLinkPreview = "https://axol.io/metadata/rich-link-preview.jpg"
+---
+<Layout
+  title={title}
+  description={description}
+  richLinkPreview={richLinkPreview}>
+  <main>
+    <div
+      class="relative flex w-full sm:min-h-screen flex-col items-center justify-start overflow-x-clip">
+      <section
+  id="topSection"
+  class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-cryptowave-sky px-4 pb-8 pt-32 text-center text-crypto-frost md:px-16 md:pb-16 md:pt-44">
+  <Image
+    src="/images/hero-mesh.webp"
+    alt="A mesh background for Axol.io"
+    width={2560}
+    height={2560}
+    loading={"eager"}
+    decoding={"sync"}
+    class="absolute inset-0 h-full w-full object-cover mix-blend-difference opacity-25 hover:scale-105 transition-all duration-300 ease-in-out"
+  />
+
+  <div
+    class="relative z-10 flex w-full max-w-[790px] flex-col items-center justify-center gap-4 sm:w-[90%] sm:gap-6">
+    <h1 class="w-full font-title text-mobile-h1 md:text-h1">
+      Oops!<br class="visible md:hidden" /> You're lost.
+    </h1>
+
+    <p class="relative inline-block text-body-md">
+      Or maybe you're just looking for a new home? 
+      <br class="hidden md:flex" />
+      Either way, the page you tried to go to doesn't exist.
+    </p>
+    <div
+      class="flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
+      <Button
+        variant="primaryDark"
+        text="Go Home"
+        href="/"
+        target="_self"
+      />
+    </div>
+    <Image
+      class="relative -z-10 -mt-4 w-auto object-cover sm:-mt-8 sm:h-[420px] md:h-[450px] lg:h-[500px]"
+      alt="An axolotl running a node on the Axol.io Network"
+      width={1658}
+      height={1182}
+      loading={"eager"}
+      decoding={"sync"}
+      src="/images/404-image.webp"
+    />
+  </div>
+</section>
+      <Separator
+        topVector="1"
+        topVectorColor="fill-cryptowave-sky"
+        bottomVector="/images/separator-bottom-1.webp"
+        backgroundClasses="mix-blend-difference opacity-10"
+        backgroundColor="bg-decentralized-coral"
+      />
+    </div>
+  </main>
+</Layout>
