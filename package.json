@@ -29,7 +29,7 @@
   "scripts": {
     "dev": "bunx --bun astro dev",
     "start": "bunx --bun astro dev",
-    "build": "bunx --bun astro check && bunx --bun astro build",
+    "build": "bun install && bunx --bun astro check && bunx --bun astro build",
     "preview": "bunx --bun astro preview",
     "astro": "bunx --bun astro",
     "cloudflare": "wrangler pages dev ./dist"
