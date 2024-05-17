@@ -5,6 +5,7 @@ import { formatDate } from "../../utils/date"
 import { Image } from "astro:assets"
 import Button from "../../components/Button.astro"
 import Separator from "../../components/Separator.astro"
+import Footer from "../../components/Footer.astro"
 
 const { slug } = Astro.params
 
@@ -44,10 +45,10 @@ const { Content } = await entry.render()
         >Back</Button
       >
     </div>
-    <div 
-        class="absolute inset-0 z-0 h-full bg-repeat w-full mix-blend-lighten"
-        style="background-image: url('/images/hero-mesh.webp');" 
-    />
+    <div
+      class="absolute inset-0 z-0 h-full w-full bg-repeat mix-blend-lighten"
+      style="background-image: url('/images/hero-mesh.webp');">
+    </div>
     <div
       class="relative z-10 mx-auto flex w-full max-w-screen-xl justify-between rounded-lg md:px-4">
       <article
@@ -67,9 +68,9 @@ const { Content } = await entry.render()
           />
           <address class="flex items-center not-italic">
             <div
-              class="inline-flex flex-row items-start gap-2 px-4 text-body-sm sm:gap-4 md:px-0 group">
+              class="group inline-flex flex-row items-start gap-2 px-4 text-body-sm sm:gap-4 md:px-0">
               <img
-                class="h-16 w-16 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                class="h-16 w-16 rounded-full transition-all duration-300 ease-in-out group-hover:scale-110"
                 src={author.image}
                 alt={author.name}
               />
@@ -111,7 +112,7 @@ const { Content } = await entry.render()
               <a
                 href="#"
                 id="tag"
-                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain hover:rotate-6 transition-all duration-300 ease-in-out">
+                class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain transition-all duration-300 ease-in-out hover:rotate-6">
                 {tag}
               </a>
             ))
@@ -193,7 +194,8 @@ const { Content } = await entry.render()
       font-size: 1rem;
     }
   }
-  #content a, #content a * {
+  #content a,
+  #content a * {
     text-decoration: underline;
   }
 </style>

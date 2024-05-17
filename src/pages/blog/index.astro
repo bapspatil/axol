@@ -23,14 +23,15 @@ const posts = (await getCollection("blog")).sort(
   richLinkPreview={richLinkPreview}>
   <main>
     <div
-      class="relative flex sm:h-screen w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
-      <div 
-        class="absolute inset-0 z-0 h-full bg-repeat bg-cover w-full mix-blend-lighten"
-        style="background-image: url('/images/hero-mesh.webp');" 
-      />
-      <div class="z-10 mx-auto flex w-full sm:h-screen flex-col gap-12 xl:px-16 justify-start">
+      class="relative flex h-auto w-full flex-col items-center justify-start gap-8 overflow-hidden bg-node-indigo px-4 pb-8 pt-32 text-crypto-frost md:px-8 md:pb-16 md:pt-44 lg:px-12 lg:pt-48 xl:px-16">
+      <div
+        class="absolute inset-0 z-0 h-full w-full bg-cover bg-repeat mix-blend-lighten"
+        style="background-image: url('/images/hero-mesh.webp');">
+      </div>
+      <div
+        class="z-10 mx-auto flex w-full flex-col justify-start gap-12 xl:px-16">
         <div class="mx-auto flex max-w-2xl flex-col gap-4 text-center">
-          <h1 class="font-display text-mobile-h1 md:text-h1 lowercase">Blog</h1>
+          <h1 class="font-display text-mobile-h1 lowercase md:text-h1">Blog</h1>
           <p class="font-body text-body-md">
             Learn more about how Axol.io and what we do.
           </p>
@@ -47,7 +48,7 @@ const posts = (await getCollection("blog")).sort(
                     <img
                       src={post.data.heroImage}
                       alt={post.data.title}
-                      class="aspect-[16/9] w-full rounded-lg object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                      class="aspect-[16/9] w-full rounded-lg object-cover transition-all duration-300 ease-in-out hover:scale-105"
                       transition:name="hero"
                       loading="eager"
                     />
@@ -64,7 +65,7 @@ const posts = (await getCollection("blog")).sort(
                         {post.data.tags.map((tag: string) => (
                           <a
                             href="#"
-                            class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain hover:rotate-6 transition-all duration-300 ease-in-out">
+                            class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain transition-all duration-300 ease-in-out hover:rotate-6">
                             {tag}
                           </a>
                         ))}
@@ -80,11 +81,11 @@ const posts = (await getCollection("blog")).sort(
                         {post.data.description}
                       </p>
                     </a>
-                    <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4 group">
+                    <div class="group relative mt-2 flex flex-row items-center gap-2 md:mt-4">
                       <img
                         src={post.data.author.image}
                         alt={post.data.author.name}
-                        class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                        class="h-12 w-12 rounded-full transition-all duration-300 ease-in-out group-hover:scale-110"
                         loading="eager"
                         decoding="sync"
                       />
@@ -112,7 +113,7 @@ const posts = (await getCollection("blog")).sort(
                       <img
                         src={post.data.heroImage}
                         alt={post.data.title}
-                        class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover hover:scale-105 transition-all duration-300 ease-in-out"
+                        class="aspect-[16/9] w-full rounded-lg bg-gray-100 object-cover transition-all duration-300 ease-in-out hover:scale-105"
                         transition:name="hero"
                         loading="lazy"
                         decoding="async"
@@ -126,11 +127,11 @@ const posts = (await getCollection("blog")).sort(
                           class="text-body-sm lowercase text-crypto-frost/50">
                           {formatDate(post.data.pubDate)}
                         </time>
-                        <div class="flex flex-row flex-wrap  items-start justify-start gap-2 md:-mx-2 =">
+                        <div class="= flex flex-row  flex-wrap items-start justify-start gap-2 md:-mx-2">
                           {post.data.tags.map((tag: string) => (
                             <a
                               href="#"
-                              class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain">
+                              class="relative z-10 rounded-full bg-cryptowave-sky px-4 py-1 font-body text-body-sm lowercase text-shadow-blockchain transition-all duration-300 ease-in-out hover:rotate-6">
                               {tag}
                             </a>
                           ))}
@@ -146,14 +147,13 @@ const posts = (await getCollection("blog")).sort(
                           {post.data.description}
                         </p>
                       </a>
-                      <div class="relative mt-2 flex flex-row items-center gap-2 md:mt-4 group">
+                      <div class="group relative mt-2 flex flex-row items-center gap-2 md:mt-4">
                         <img
                           src={post.data.author.image}
                           alt={post.data.author.name}
-                          class="h-12 w-12 rounded-full group-hover:scale-110 transition-all duration-300 ease-in-out"
+                          class="h-12 w-12 rounded-full transition-all duration-300 ease-in-out group-hover:scale-110"
                           loading="lazy"
                           decoding="async"
-                          
                         />
                         <div class="flex flex-col gap-0">
                           <p class="font-display text-nav text-crypto-frost">
