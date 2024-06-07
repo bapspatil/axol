@@ -36,12 +36,7 @@ const navLinks = [
     name: "Blog",
     href: "/blog",
     target: "_self",
-  },
-  {
-    name: "Faucet",
-    href: "https://faucet.axol.io",
-    target: "_blank",
-  },
+  }
 ]
 
 const navContainer = {
