@@ -67,24 +67,28 @@ import Button from "../components/Button.astro"
     <h2 class="font-title text-mobile-h2 md:text-h3">Running node infra on:</h2>
     <div
       class="flex flex-row flex-wrap items-center justify-center gap-8 px-4 py-0 sm:gap-12 md:gap-16 md:px-16">
-      <Image
-        class="relative h-[52px] w-auto object-cover"
-        alt="Eigen Layer"
-        src="/images/company-eigenlayer.svg"
-        width={260}
-        height={104}
-        loading={"eager"}
-        decoding={"sync"}
-      />
-      <Image
-        class="relative h-[26px] w-auto object-cover md:h-[32px]"
-        alt="Gnosis Chain"
-        src="/images/company-gnosischain.svg"
-        width={600}
-        height={64}
-        loading={"eager"}
-        decoding={"sync"}
-      />
+      <a href="https://app.stakewise.io/vault/mainnet/0x2cf7cd8004c99cb4b6946e0dd2b19fba89bbe4eb" target="_blank">
+        <Image
+          class="relative h-[52px] w-auto object-cover"
+          alt="Ethereum"
+          src="/images/company-eth.svg"
+          width={260}
+          height={104}
+          loading={"eager"}
+          decoding={"sync"}
+        />
+      </a>
+      <a href="https://app.stakewise.io/vault/gnosis/0x33c346928ed9249cf1d5fc16ae32a8cffa1671ad" target="_blank">
+        <Image
+          class="relative h-[26px] w-auto object-cover md:h-[32px]"
+          alt="Gnosis Chain"
+          src="/images/company-gnosischain.svg"
+          width={600}
+          height={64}
+          loading={"eager"}
+          decoding={"sync"}
+        />
+      </a>
       <Image
         class="relative h-[46px] w-auto object-cover"
         alt="Lido"
