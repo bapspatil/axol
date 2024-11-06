@@ -6,7 +6,7 @@ import { useRef } from "react"
 import Ticker from "framer-motion-ticker"
 
 const announcement = {
-  text: "Now running Stakewise Vaults GNO/ETH, & Lido ETH DVT!",
+  text: "Now running ETH Ephemery, Elixir, & Lido CSM + SDVT!",
   icon: "/images/icon-announcement.svg",
   url: "#",
 }
