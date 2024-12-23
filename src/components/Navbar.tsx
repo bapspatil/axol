@@ -13,16 +13,6 @@ const announcement = {
 
 const navLinks = [
   {
-    name: "Features",
-    href: "/#featuresSection",
-    target: "_self",
-  },
-  {
-    name: "Use Cases",
-    href: "/#useCasesSection",
-    target: "_self",
-  },
-  {
     name: "Team",
     href: "/#teamSection",
     target: "_self",
@@ -40,6 +30,11 @@ const navLinks = [
   {
     name: "Faucet",
     href: "https://faucet.axol.io",
+    target: "_blank",
+  },
+  {
+    name: "Status",
+    href: "https://status.axol.io",
     target: "_blank",
   },
 ]
