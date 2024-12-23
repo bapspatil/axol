@@ -6,9 +6,9 @@ import { useRef } from "react"
 import Ticker from "framer-motion-ticker"
 
 const announcement = {
-  text: "Now running Babylon Mainnet, ETH Ephemery, Elixir Mainnet, & Lido SDVT!",
+  text: "New Status Dashboard!",
   icon: "/images/icon-announcement.svg",
-  url: "#",
+  url: "https://status.axol.io",
 }
 
 const navLinks = [
