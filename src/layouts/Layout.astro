@@ -1,5 +1,5 @@
 ---
-import { ViewTransitions } from "astro:transitions"
+import { ClientRouter } from "astro:transitions"
 import Footer from "../components/Footer.astro"
 import Navbar from "../components/Navbar.tsx"
 import NewNavbar from "../components/NewNavbar.astro"
@@ -130,7 +130,7 @@ const twitterHandle = "@axol_io"
       title="Axol.io Blog"
       href={`${Astro.site}rss.xml`}
     />
-    <ViewTransitions />
+    <ClientRouter />
     
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX46JZQ69T"></script>

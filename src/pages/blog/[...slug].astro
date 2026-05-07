@@ -1,6 +1,6 @@
 ---
 import Layout from "../../layouts/Layout.astro"
-import { getEntry } from "astro:content"
+import { getEntry, render } from "astro:content"
 import { formatDate } from "../../utils/date"
 import { Image } from "astro:assets"
 import Button from "../../components/Button.astro"
@@ -26,7 +26,7 @@ const author = entry.data.author
 const pubDate = entry.data.pubDate
 const tags = entry.data.tags
 
-const { Content } = await entry.render()
+const { Content } = await render(entry)
 ---
 
 <Layout

@@ -11,7 +11,7 @@ export async function GET(context) {
       title: post.data.title,
       pubDate: post.data.pubDate,
       description: post.data.description,
-      link: `https://axol.io/blog/${post.slug}`,
+      link: `https://axol.io/blog/${post.id}`,
     })),
   })
 }
